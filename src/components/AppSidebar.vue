@@ -10,14 +10,14 @@
       <el-menu
         class="el-menu-demo"
         mode="horizontal"
-        background-color="#303133"
+        background-color="black"
         text-color="#fff"
         active-text-color="#ffd04b">
-        <el-menu-item @click="goToHome">Luca Canali</el-menu-item>
-        <el-menu-item @click="goToHome">Home</el-menu-item>
-        <el-menu-item>Info</el-menu-item>
-        <el-menu-item>Projects</el-menu-item>
-        <el-menu-item style="color: grey;">GitHub</el-menu-item>
+        <el-menu-item @click="goToHome" style="font-size: x-large;">Luca Canali</el-menu-item>
+        <el-menu-item @click="goToHome" style="font-size: large;">Home</el-menu-item>
+        <el-menu-item @click="goToInfo" style="font-size: large;">Info</el-menu-item>
+        <el-menu-item @click="goToProjects" style="font-size: large;">Projects</el-menu-item>
+        <el-menu-item @click="goToGithub" style="color: grey;">GitHub</el-menu-item>
       </el-menu>
     </div>
   </div>
@@ -25,11 +25,13 @@
 
 <script>
 import avatar from '../assets/pictures/avatar.jpg'
+import '../assets/css/colors.css'
 
 export default {
   data() {
     return {
       circleUrl: avatar,
+      githubProfile: "https://github.com/Luca9862"
     };
   },
   methods: {
@@ -42,6 +44,19 @@ export default {
       if (this.$route.path !== '/home') {
         this.$router.push('/home');
       }
+    },
+    goToInfo(){
+      if (this.$route.path !== '/info') {
+        this.$router.push('/info');
+      }
+    },
+    goToProjects(){
+      if (this.$route.path !== '/projects') {
+        this.$router.push('/projects');
+      }
+    },
+    goToGithub(){
+      window.open(this.githubProfile, "_blank");
     }
   }
 };
@@ -53,7 +68,7 @@ export default {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: #2c3e50;
+  color: background-color;
 }
 
 .header-container {

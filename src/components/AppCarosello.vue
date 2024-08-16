@@ -1,12 +1,22 @@
 <template>
     <el-carousel 
-    indicator-position="outside" 
-    interval="1000">
-        <el-carousel-item v-for="item in 4" :key="item">
-            <h3>{{ item }}</h3>
+    indicator-position="outside">
+        <el-carousel-item>
+            <img :src="item" alt="Cover Image" />
         </el-carousel-item>
     </el-carousel>
 </template>
+
+<script>
+import cover from '../assets/pictures/cover.png'
+export default{
+    data(){
+        return{
+            item: cover
+        }
+    }
+}
+</script>
 
 <style>
 .el-carousel__item h3 {
@@ -23,5 +33,16 @@
 
 .el-carousel__item:nth-child(2n+1) {
     background-color: #d3dce6;
+}
+.el-carousel__item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Adatta l'immagine al contenitore mantenendo le proporzioni */
+}
+.el-carousel__arrow{
+    display: none;
+}
+.el-carousel__button{
+    display: none !important;
 }
 </style>
