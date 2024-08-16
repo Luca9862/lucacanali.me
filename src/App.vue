@@ -1,5 +1,5 @@
 <template>
-  <div id="app" style="background-color: #303133;">
+  <div id="app">
     <header>
       <app-sidebar></app-sidebar>
     </header>
@@ -8,6 +8,7 @@
 </template>
 
 <script>
+import './assets/css/colors.css'
 import AppSidebar from './components/AppSidebar.vue';
 
 export default {
@@ -19,7 +20,7 @@ export default {
 </script>
 
 <style>
-html{
-  background-color: #303133;
+html, #app{
+  background-color: background-color;
 }
 </style>
