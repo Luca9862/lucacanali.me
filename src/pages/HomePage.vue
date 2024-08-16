@@ -1,5 +1,6 @@
 <template>
-    <div>
+    <div id="home">
+        <h1>Home</h1>
     </div>
 </template>
 
@@ -8,3 +9,9 @@ export default{
 
 }
 </script>
+
+<style>
+#home{
+    background-color: #303133;
+}
+</style>
