@@ -17,7 +17,7 @@
         <el-menu-item @click="goToHome" style="font-size: large;">Home</el-menu-item>
         <el-menu-item @click="goToInfo" style="font-size: large;">Info</el-menu-item>
         <el-menu-item @click="goToProjects" style="font-size: large;">Projects</el-menu-item>
-        <el-menu-item @click="goToGithub" style="color: grey;">GitHub</el-menu-item>
+        <el-menu-item @click="goToGithub" style="color: grey;">GitHub<el-avatar :size="30" :src="githubPicture"></el-avatar></el-menu-item>
       </el-menu>
     </div>
   </div>
@@ -25,13 +25,15 @@
 
 <script>
 import avatar from '../assets/pictures/avatar.jpg'
+import gitPic from '../assets/pictures/github-mark-white.png'
 import '../assets/css/colors.css'
 
 export default {
   data() {
     return {
       circleUrl: avatar,
-      githubProfile: "https://github.com/Luca9862"
+      githubProfile: "https://github.com/Luca9862",
+      githubPicture: gitPic
     };
   },
   methods: {

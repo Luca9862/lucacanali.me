@@ -4,7 +4,7 @@
             <el-col :span="24"><div class="grid-content bg-purple-dark"><app-carosello></app-carosello></div></el-col>
             </el-row>
             <el-row>
-            <el-col :span="12"><div class="grid-content bg-purple"></div></el-col>
+            <el-col :span="12"><div class="grid-content bg-purple-dark"><app-cards></app-cards></div></el-col>
             <el-col :span="12"><div class="grid-content bg-purple-light"></div></el-col>
             </el-row>
             <el-row>
@@ -31,13 +31,17 @@
 
 <script>
 import AppCarosello from '@/components/AppCarosello.vue';
+import ProjectCards from '@/components/ProjectCards.vue';
 
 export default{
     components:{
-        appCarosello: AppCarosello
+        appCarosello: AppCarosello,
+        appCards: ProjectCards
     }
 }
 </script>
 
 <style>
+
+
 </style>
