@@ -1,9 +1,12 @@
 <template>
     <div>
-        <h1 style="color: wheat;">Projects</h1>
+      <div style="padding-bottom: 2%;">
+        <span style="color: wheat; font-size: xx-large;">Some of my Projects</span>
+        <hr width="40%">
+      </div>
     <el-col :span="8" v-for="(project, index) in projects" :key="project" :offset="index > 0 ? 2 : 0">
       <el-card id="card" :body-style="{ padding: '0px' }">
-        <img src="https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png" class="image">
+        <img :src="project.image" class="image" width="150">
         <div style="padding: 14px;">
           <span id="project-name">{{project.name}}</span>
           <div class="bottom-clearfix">
@@ -11,18 +14,31 @@
           </div>
         </div>
       </el-card>
+      <div style="padding-top: 4%;">
+        <hr width="40%">
+      </div>
     </el-col>
 </div>
 </template>   
 
 
 <script>
+import myPetLogo from '../assets/pictures/mypet_logo.jpg'
 export default{
     data(){
         return{
             projects: [
                 {
-                    name: 'My Pets'
+                    name: 'My Pets',
+                    image: myPetLogo
+                },
+                {
+                    name: 'My Pets',
+                    image: myPetLogo
+                },
+                {
+                    name: 'My Pets',
+                    image: myPetLogo
                 }
             ]
         }
@@ -31,25 +47,18 @@ export default{
 </script>
 
 <style>
-
-.grid-content {
-  height: 100%;
-  text-align: center;
-}
-
 .bottom-clearfix{
     padding-top: 8px;
 }
 #card{
   cursor: pointer;
-  width: fit-content;
+  width: 300px;
 }
 .el-col, .el-col-8, .el-col-offset-0{
-  width: 100% !important;
   text-align: -webkit-center;
 }
 
+.el-col-offset-2 {
+    margin-left: 0% !important;
+}
 </style>
-
-width: 100%;
-      text-align: -webkit-center;
