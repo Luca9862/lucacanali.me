@@ -1,14 +1,12 @@
 <template>
-    <div>
-      <div style="padding-bottom: 2%;">
-        <span style="color: wheat; font-size: xx-large;">Some of my Projects</span>
-        <hr width="40%">
-      </div>
-    <el-col :span="8" v-for="(project, index) in projects" :key="project" :offset="index > 0 ? 2 : 0">
-      <el-card id="card" :body-style="{ padding: '0px' }">
-        <img :src="project.image" class="image" width="150">
+  <div id="cards">
+    <h1 style="color: wheat;">Projects</h1>
+    <el-col :span="8" v-for="(project, index) in projects" :key="index" :offset="index > 0 ? 2 : 0">
+      <el-card class="card" :body-style="{ padding: '0px' }">
+        <img :src="project.image"
+          class="image">
         <div style="padding: 14px;">
-          <span id="project-name">{{project.name}}</span>
+          <span id="project-name">{{ project.name }}</span>
           <div class="bottom-clearfix">
             <el-button type="primary" class="button">Github Page</el-button>
           </div>
@@ -18,47 +16,56 @@
         <hr width="40%">
       </div>
     </el-col>
-</div>
-</template>   
+  </div>
+</template>
 
 
 <script>
-import myPetLogo from '../assets/pictures/mypet_logo.jpg'
-export default{
-    data(){
-        return{
-            projects: [
-                {
-                    name: 'My Pets',
-                    image: myPetLogo
-                },
-                {
-                    name: 'My Pets',
-                    image: myPetLogo
-                },
-                {
-                    name: 'My Pets',
-                    image: myPetLogo
-                }
-            ]
+import '../assets/css/colors.css'
+import my_pet_pic from '../assets/pictures/my-pets.png'
+
+export default {
+  data() {
+    return {
+      projects: [
+        {
+          name: 'My Pets',
+          image: my_pet_pic
+        },
+        {
+          name: 'Chess Study',
+          image: 'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png'
+        },
+        {
+          name: 'Ciao',
+          image: 'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png'
+
         }
+      ]
     }
+  }
 }
 </script>
 
 <style>
-.bottom-clearfix{
-    padding-top: 8px;
-}
-#card{
-  cursor: pointer;
-  width: 300px;
-}
-.el-col, .el-col-8, .el-col-offset-0{
+#cards {
   text-align: -webkit-center;
-}
 
-.el-col-offset-2 {
-    margin-left: 0% !important;
+  .bottom-clearfix {
+    padding-top: 8px;
+  }
+
+  .card {
+    cursor: pointer;
+    width: fit-content;
+    height: fit-content;
+  }
+
+  .image{
+
+  }
+  .el-col-offset-2 {
+    margin-left: 0%;
+  }
 }
 </style>

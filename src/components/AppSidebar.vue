@@ -7,11 +7,7 @@
       </div>
 
       <!-- Menu -->
-      <el-menu
-        class="el-menu-demo"
-        mode="horizontal"
-        background-color="black"
-        text-color="#fff"
+      <el-menu class="el-menu-demo" mode="horizontal" background-color="black" text-color="#fff"
         active-text-color="#ffd04b">
         <el-menu-item @click="goToHome" style="font-size: x-large;">Luca Canali</el-menu-item>
         <el-menu-item @click="goToHome" style="font-size: large;">Home</el-menu-item>
@@ -37,27 +33,27 @@ export default {
     };
   },
   methods: {
-    goToEmpty(){
+    goToEmpty() {
       if (this.$route.path !== '/') {
         this.$router.push('/');
       }
     },
-    goToHome(){
+    goToHome() {
       if (this.$route.path !== '/home') {
         this.$router.push('/home');
       }
     },
-    goToInfo(){
+    goToInfo() {
       if (this.$route.path !== '/info') {
         this.$router.push('/info');
       }
     },
-    goToProjects(){
+    goToProjects() {
       if (this.$route.path !== '/projects') {
         this.$router.push('/projects');
       }
     },
-    goToGithub(){
+    goToGithub() {
       window.open(this.githubProfile, "_blank");
     }
   }
@@ -71,27 +67,29 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: background-color;
-}
 
-.header-container {
-  display: flex;
-  align-items: center;
-  justify-content: space-between; /* Spazio tra avatar+nome e menu */
-}
+  .header-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* Spazio tra avatar+nome e menu */
+  }
 
-.avatar-name-container {
-  display: flex;
-  align-items: center;
-}
+  .avatar-name-container {
+    display: flex;
+    align-items: center;
+  }
 
-.username {
-  margin-left: 10px;
-  color: #fff;
-  font-size: 18px;
-}
+  .username {
+    margin-left: 10px;
+    color: #fff;
+    font-size: 18px;
+  }
 
-.el-menu-demo {
-  flex-grow: 1; /* Il menu si espanderà per occupare lo spazio disponibile */
-  margin-left: 20px;
+  .el-menu-demo {
+    flex-grow: 1;
+    /* Il menu si espanderà per occupare lo spazio disponibile */
+    margin-left: 20px;
+  }
 }
 </style>
