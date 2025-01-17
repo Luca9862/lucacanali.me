@@ -5,13 +5,13 @@
                 <div class="grid-content bg-purple">
                     <el-card class="box-card" style="background-color: black;">
                         <div slot="header" class="clearfix">
-                            <span style="font-family: Arial, Helvetica, sans-serif;">Luca Canali</span>
+                            <span class="text-item">Luca Canali</span>
                             <div style="padding-left: 5%;">
                                 <el-button style="float: right;" type="primary">Contact me</el-button>
                             </div>
                             
                         </div>
-                        <div class="text item">
+                        <div class="text-item">
                             <span>{{ text }}</span>
                         </div>
                     </el-card>
@@ -41,5 +41,9 @@ export default {
 <style>
 .info-home{
 
+}
+.text-item{
+    color: white;   
+    font-family: Arial, Helvetica, sans-serif;   
 }
 </style>

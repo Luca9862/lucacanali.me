@@ -7,7 +7,7 @@
             <el-col :span="24"><div class="grid-content bg-purple-dark"><app-cards></app-cards></div></el-col>
         </el-row>
         <el-row>
-            <el-col :span="24"><div class="grid-content bg-purple"><app-info></app-info></div></el-col>
+            <el-col :span="24"><div class="app-info"><app-info></app-info></div></el-col>
         </el-row>
     </div>
 </template>

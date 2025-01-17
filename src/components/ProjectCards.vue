@@ -23,6 +23,7 @@
 <script>
 import '../assets/css/colors.css'
 import my_pet_pic from '../assets/pictures/my-pets.png'
+import pokedex_picture from '../assets/pictures/pokedex_picture.jpg'
 
 export default {
   data() {
@@ -33,12 +34,12 @@ export default {
           image: my_pet_pic
         },
         {
-          name: 'Chess Study',
-          image: 'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png'
+          name: 'Pokedex',
+          image: pokedex_picture
         },
         {
           name: 'Ciao',
-          image: 'https://shadow.elemecdn.com/app/element/hamburger.9cf7b091-55e9-11e9-a976-7f4d0b07eef6.png'
+          image: my_pet_pic
 
         }
       ]
@@ -62,7 +63,8 @@ export default {
   }
 
   .image{
-
+    height: 300px;
+    width: 200px;
   }
   .el-col-offset-2 {
     margin-left: 0%;
