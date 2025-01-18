@@ -33,14 +33,37 @@
                     <span style="color: white;">I am 26 years old and a full-stack developer with experience in back-end, front-end, and databases. I occasionally work as a freelancer, building web applications and providing tailored solutions for various technological needs. I am passionate about technology and continually improving my skills by exploring new technologies and frameworks.</span>
                 </div>
             </el-col>
-            
+            <el-col :span="24">
+                <div class="grid-content bg-purple-dark" style="text-align: center;">
+                    <el-avatar :size="80" :src="vueIcon" style="background-color: black;"></el-avatar>
+                    <el-avatar :size="80" :src="javaIcon" style="background-color: black;"></el-avatar>
+                    <el-avatar :size="80" :src="cSharpIcon" style="background-color: black;"></el-avatar>
+                    <el-avatar :size="80" :src="flutterIcon" style="background-color: black;"></el-avatar>
+
+                
+                </div>
+        </el-col>
+
         </el-row>
     </div>
 </template>
 
 <script>
+import vuePic from '../assets/icons/icons8-vue-js.svg'
+import javaPic from '../assets/icons/icons8-java.svg'
+import cSharpPic from '../assets/icons/icons8-c-sharp-logo.svg'
+import flutterPic from '../assets/icons/icons8-flutter.svg'
+
 
 export default{
+    data(){
+        return{
+            vueIcon: vuePic,
+            javaIcon: javaPic,
+            cSharpIcon: cSharpPic,
+            flutterIcon: flutterPic
+        }
+    },
     components:{
     }
 }
