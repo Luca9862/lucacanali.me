@@ -21,7 +21,7 @@
 
 <script>
 import avatar from '../assets/pictures/avatar.jpg'
-import gitPic from '../assets/pictures/github-mark-white.png'
+import gitPic from '../assets/icons/github-mark-white.svg'
 import '../assets/css/colors.css'
 
 export default {
