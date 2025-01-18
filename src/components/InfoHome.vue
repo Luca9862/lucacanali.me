@@ -1,29 +1,13 @@
 <template>
     <div class="info-home">
-        <el-row>
-            <el-col :span="8">
-                <div class="grid-content bg-purple">
-                    <el-card class="box-card" style="background-color: black;">
-                        <div slot="header" class="clearfix">
-                            <span class="text-item">Luca Canali</span>
-                            <div style="padding-left: 5%;">
-                                <el-button style="float: right;" type="primary">Contact me</el-button>
-                            </div>
-                            
-                        </div>
-                        <div class="text-item">
-                            <span>{{ text }}</span>
-                        </div>
-                    </el-card>
-                </div>
-            </el-col>
-            <el-col :span="8">
-                <div class="grid-content bg-purple-light"></div>
-            </el-col>
-            <el-col :span="8">
-                <div class="grid-content bg-purple"></div>
-            </el-col>
-        </el-row>
+        <el-descriptions title="User Info">
+            <el-descriptions-item label="Name">Luca Canali</el-descriptions-item>
+            <el-descriptions-item label="Email">canali.luca998@gmail.com</el-descriptions-item>
+            <el-descriptions-item label="Place">Varese (ITA)</el-descriptions-item>
+            <el-descriptions-item label="University">
+            <el-tag size="small">University of Insubria</el-tag>
+            </el-descriptions-item>
+        </el-descriptions>
     </div>
 </template>
 
@@ -40,10 +24,16 @@ export default {
 
 <style>
 .info-home{
+    .el-descriptions-row{
+    background-color: black;
+    color: white;
+}
 
 }
 .text-item{
     color: white;   
     font-family: Arial, Helvetica, sans-serif;   
 }
+
+
 </style>
