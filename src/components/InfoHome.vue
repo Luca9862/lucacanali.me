@@ -35,5 +35,8 @@ export default {
     font-family: Arial, Helvetica, sans-serif;   
 }
 
+.el-card{
+    background-color: darkgray !important;
+}
 
 </style>
