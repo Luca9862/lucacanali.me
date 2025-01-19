@@ -39,8 +39,6 @@
                     <el-avatar :size="80" :src="javaIcon" style="background-color: black;"></el-avatar>
                     <el-avatar :size="80" :src="cSharpIcon" style="background-color: black;"></el-avatar>
                     <el-avatar :size="80" :src="flutterIcon" style="background-color: black;"></el-avatar>
-
-                
                 </div>
         </el-col>
 
@@ -53,6 +51,8 @@ import vuePic from '../assets/icons/icons8-vue-js.svg'
 import javaPic from '../assets/icons/icons8-java.svg'
 import cSharpPic from '../assets/icons/icons8-c-sharp-logo.svg'
 import flutterPic from '../assets/icons/icons8-flutter.svg'
+import linkedingPic from '../assets/icons/icons8-linkedin.svg'
+
 
 
 export default{
@@ -61,7 +61,8 @@ export default{
             vueIcon: vuePic,
             javaIcon: javaPic,
             cSharpIcon: cSharpPic,
-            flutterIcon: flutterPic
+            flutterIcon: flutterPic,
+            linkedinIcon: linkedingPic
         }
     },
     components:{
