@@ -1,15 +1,15 @@
 <template>
     <div class="info-home">
-        <hr>
+        <hr style="opacity: 50%;">
         <el-row style="width: 100%; text-align: center;">
             <el-col :span="8">
                 <div class="grid-content bg-purple" style="color: white;">
-                    <span>Luca Canali</span>
+                    <span style="opacity: 60%;">Luca Canali</span>
                 </div>
             </el-col>
             <el-col :span="8">
                 <div class="grid-content bg-purple" style="color: white;">
-                    <span>canali.luca998@gmail.com</span>
+                    <span style="opacity: 60%;">canali.luca998@gmail.com</span>
                 </div>
             </el-col>
             <el-col :span="8">
@@ -23,13 +23,13 @@
         </el-row>
         <el-row style="width: 100%; text-align: center; color: white;">
             <el-col :span="8">
-                <span>Software Developer</span>
+                <span style="opacity: 60%;">Software Developer</span>
             </el-col>
             <el-col :span="8">
-                <span>Vue Js</span>
+                <span style="opacity: 60%;">Vue Js</span>
             </el-col>
-            <el-col :span="8">
-                <span>Icon by </span><a target="_blank" href="https://icons8.com" style="color: white;">Icons8</a>
+            <el-col :span="8" style="opacity: 40%; font-size: 13px;">
+                <span >Icon by </span><a target="_blank" href="https://icons8.com" style="color: white;">Icons8</a>
             </el-col>
         </el-row>
     </div>
