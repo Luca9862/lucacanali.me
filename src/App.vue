@@ -22,5 +22,6 @@ export default {
 <style>
 html, #app{
   background-color: background-color;
+  font-family: sans-serif;
 }
 </style>
