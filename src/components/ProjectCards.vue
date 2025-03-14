@@ -24,7 +24,8 @@
 import '../assets/css/colors.css'
 import my_pet_pic from '../assets/pictures/my-pets.png'
 import pokedex_picture from '../assets/pictures/pokedex_picture.jpg'
-import coming_soon from '../assets/pictures/coming_soon.jpeg'
+import dice from '../assets/pictures/dice-5.png'
+// import coming_soon from '../assets/pictures/coming_soon.jpeg'
 
 export default {
   data() {
@@ -41,10 +42,9 @@ export default {
           url: 'https://github.com/Luca9862/pokedex'
         },
         {
-          name: '-',
-          image: coming_soon,
-          url: ''
-
+          name: 'Roll Dice',
+          image: dice,
+          url: 'https://github.com/Luca9862/roll_dice_flutter'
         }
       ]
     }
@@ -73,11 +73,16 @@ export default {
     cursor: pointer;
     width: fit-content;
     height: fit-content;
+    height: 400px;
+    width: 200px;
   }
 
-  .image{
-    height: 300px;
-    width: 200px;
+  .image {
+    width: 100%; /* Occupa tutta la larghezza della card */
+    height: 300px; /* Altezza fissa per tutte le immagini */
+    object-fit: contain; /* Mantiene le proporzioni senza distorcere l'immagine */
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
   }
   .el-col-offset-2 {
     margin-left: 0%;
