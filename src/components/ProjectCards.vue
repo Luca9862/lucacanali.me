@@ -24,6 +24,7 @@
 import '../assets/css/colors.css'
 import my_pet_pic from '../assets/pictures/my-pets.png'
 import pokedex_picture from '../assets/pictures/pokedex_picture.jpg'
+import coming_soon from '../assets/pictures/coming_soon.jpeg'
 
 export default {
   data() {
@@ -38,8 +39,8 @@ export default {
           image: pokedex_picture
         },
         {
-          name: 'Ciao',
-          image: my_pet_pic
+          name: '-',
+          image: coming_soon
 
         }
       ]
