@@ -8,7 +8,7 @@
         <div style="padding: 14px;">
           <span id="project-name">{{ project.name }}</span>
           <div class="bottom-clearfix">
-            <el-button type="primary" class="button">Github Page</el-button>
+            <el-button type="primary" class="button" @click="openGithub(project.url)">Github Page</el-button>
           </div>
         </div>
       </el-card>
@@ -32,19 +32,31 @@ export default {
       projects: [
         {
           name: 'My Pets',
-          image: my_pet_pic
+          image: my_pet_pic,
+          url: 'https://github.com/Luca9862/MyPet'
         },
         {
           name: 'Pokedex',
-          image: pokedex_picture
+          image: pokedex_picture,
+          url: 'https://github.com/Luca9862/pokedex'
         },
         {
           name: '-',
-          image: coming_soon
+          image: coming_soon,
+          url: ''
 
         }
       ]
     }
+  },
+  methods: {
+    openGithub(url) {
+    if (url) {
+      window.open(url, '_blank');
+    } else {
+      alert('Nessun repository disponibile per questo progetto.');
+    }
+  }
   }
 }
 </script>
