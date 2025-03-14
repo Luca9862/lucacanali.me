@@ -11,7 +11,6 @@
         active-text-color="#ffd04b">
         <el-menu-item @click="goToHome" style="font-size: x-large;">Luca Canali</el-menu-item>
         <el-menu-item @click="goToHome" style="font-size: large;">Home</el-menu-item>
-        <el-menu-item @click="goToProjects" style="font-size: large;">Projects</el-menu-item>
         <el-menu-item @click="goToInfo" style="font-size: large;">Info</el-menu-item>
         <el-menu-item @click="goToGithub" style="color: grey;"><span style="padding-right: 8%;">GitHub</span><el-avatar :size="25" :src="githubPicture" style="background-color: black;"></el-avatar></el-menu-item>
       </el-menu>
@@ -46,11 +45,6 @@ export default {
     goToInfo() {
       if (this.$route.path !== '/info') {
         this.$router.push('/info');
-      }
-    },
-    goToProjects() {
-      if (this.$route.path !== '/projects') {
-        this.$router.push('/projects');
       }
     },
     goToGithub() {

@@ -4,10 +4,10 @@
         <el-row style="width: 100%; text-align: left; padding-left: 12%;">
             <el-col :span="12">
                 <div class="grid-content bg-purple" style="color: white;">
-                    <span style="opacity: 60%;">Home</span><br>
-                    <span style="opacity: 60%;">Projects</span><br>
-                    <span style="opacity: 60%;">Info</span><br>
-                    <span style="opacity: 60%;">GitHub</span>
+                    <span style="opacity: 60%;"><!--Home--></span><br>
+                    <span style="opacity: 60%;"><!--Projects--></span><br>
+                    <span style="opacity: 60%;"><!--Info--></span><br>
+                    <span style="opacity: 60%;"><!--GitHub--></span>
                 </div>
             </el-col>
             <el-col :span="12" style="text-align: right; padding-right: 12%;">
