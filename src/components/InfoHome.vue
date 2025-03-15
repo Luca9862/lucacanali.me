@@ -12,11 +12,21 @@
             </el-col>
             <el-col :span="12" style="text-align: right; padding-right: 12%;">
                 <div class="grid-content bg-purple" style="color: white;">
-                    <el-avatar :size="30" class="social-icon" :src="linkedinIcon" style="background-color: black;"></el-avatar>
-                    <el-avatar :size="30" class="social-icon" :src="mediumIcon" style="background-color: white;"></el-avatar>
-                    <el-avatar :size="30" class="social-icon" :src="instagramIcon" style="background-color: black;"></el-avatar>
-                    <el-avatar :size="30" class="social-icon" :src="linktreeIcon" style="background-color: black;"></el-avatar>        
-                    <el-avatar :size="30" class="social-icon" :src="gmailIcon" style="background-color: black;"></el-avatar>        
+                    <a :href="linkedinUrl" target="_blank">
+                        <el-avatar :size="30" class="social-icon" :src="linkedinIcon" style="background-color: black;"></el-avatar>
+                    </a>
+                    <a :href="mediumUrl" target="_blank">
+                        <el-avatar :size="30" class="social-icon" :src="mediumIcon" style="background-color: white;"></el-avatar>
+                    </a>
+                    <a :href="instagramUrl" target="_blank">
+                        <el-avatar :size="30" class="social-icon" :src="instagramIcon" style="background-color: black;"></el-avatar>
+                    </a>
+                    <a :href="linktreeUrl" target="_blank">
+                        <el-avatar :size="30" class="social-icon" :src="linktreeIcon" style="background-color: black;"></el-avatar>        
+                    </a>
+                    <a :href="gmailUrl" target="_blank">
+                        <el-avatar :size="30" class="social-icon" :src="gmailIcon" style="background-color: black;"></el-avatar>        
+                    </a>
                 </div>
             </el-col>        
         </el-row>
@@ -43,6 +53,11 @@ export default {
             linktreeIcon: linktreePic,
             mediumIcon: mediumPic,
             gmailIcon: gmailPic,
+            linkedinUrl: "https://www.linkedin.com/in/luca-canali-2bb755193/",
+            instagramUrl: "https://www.instagram.com/_luca.canali/",
+            linktreeUrl: "https://linktr.ee/lucacanali",
+            mediumUrl: "https://medium.com/@canali.luca998",
+            gmailUrl: "canali.luca998@gmail.com",
             text: 'I am 26 years old and a full-stack developer with experience in back-end, front-end, and databases. I occasionally work as a freelancer, building web applications and providing tailored solutions for various technological needs. I am passionate about technology and continually improving my skills by exploring new technologies and frameworks.'
         }
     }
