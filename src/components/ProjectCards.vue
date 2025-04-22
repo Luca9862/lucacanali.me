@@ -1,7 +1,13 @@
 <template>
   <div id="cards">
     <h1 style="color: wheat;">Projects</h1>
-    <el-col :span="8" v-for="(project, index) in projects" :key="index" :offset="index > 0 ? 2 : 0">
+    <el-col
+        v-for="(project, index) in projects"
+        :key="index"
+        :xs="24" 
+        :sm="12"
+        :md="8" 
+      >
       <el-card class="card" :body-style="{ padding: '0px' }">
         <img :src="project.image"
           class="image">

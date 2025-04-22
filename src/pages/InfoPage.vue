@@ -1,7 +1,7 @@
 <template>
     <div>
         <el-row style="padding-top: 80px;">
-            <el-col :span="12" style="padding-right: 20px; padding-left: 10px;">
+            <el-col :span="24" style="padding-right: 20px; padding-left: 10px;">
                 <div class="grid-content bg-purple">
                     <div class="block">
                         <el-timeline>
@@ -28,7 +28,7 @@
                     </div>
                 </div>
             </el-col>
-            <el-col :span="12" style="padding-left: 20px; padding-right: 10px;">
+            <el-col :span="24" style="padding-left: 20px; padding-right: 10px;">
                 <div class="grid-content bg-purple-light">
                     <span style="color: white;">I am 26 years old and a full-stack developer with experience in back-end, front-end, and databases. I occasionally work as a freelancer, building web applications and providing tailored solutions for various technological needs. I am passionate about technology and continually improving my skills by exploring new technologies and frameworks.</span>
                 </div>
