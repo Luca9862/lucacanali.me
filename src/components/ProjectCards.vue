@@ -18,7 +18,7 @@
           </div>
         </div>
       </el-card>
-      <div style="padding-top: 4%;">
+      <div style="padding-top: 1%;">
         <hr width="40%">
       </div>
     </el-col>
