@@ -77,15 +77,14 @@ export default {
 
   .card {
     cursor: pointer;
-    width: fit-content;
-    height: fit-content;
     height: 400px;
     width: 200px;
   }
 
   .image {
-    width: 100%; /* Occupa tutta la larghezza della card */
     height: 300px; /* Altezza fissa per tutte le immagini */
+    max-height: 300px;
+    max-width: 180px;
     object-fit: contain; /* Mantiene le proporzioni senza distorcere l'immagine */
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
