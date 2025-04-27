@@ -29,7 +29,7 @@
 <script>
 import '../assets/css/colors.css'
 import my_pet_pic from '../assets/pictures/my-pets.png'
-import pokedex_picture from '../assets/pictures/pokedex_picture.jpg'
+import pokedex_picture from '../assets/pictures/pokedex_picture.png'
 import dice from '../assets/pictures/dice-5.png'
 // import coming_soon from '../assets/pictures/coming_soon.jpeg'
 
