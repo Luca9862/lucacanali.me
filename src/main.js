@@ -4,10 +4,11 @@ import VueRouter from 'vue-router'
 import { routes } from './router'
 import ElementUI from 'element-ui';
 import 'element-ui/lib/theme-chalk/index.css';
+import vuetify from './plugins/vuetify'
 
 Vue.config.productionTip = false
 Vue.use(ElementUI);
-Vue.use(VueRouter); 
+Vue.use(VueRouter);
 
 const router = new VueRouter({
   routes: routes,
@@ -17,5 +18,6 @@ const router = new VueRouter({
 
 new Vue({
   render: h => h(App),
-  router: router,
+  vuetify,
+  router: router
 }).$mount('#app')

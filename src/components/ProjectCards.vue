@@ -92,5 +92,8 @@ export default {
   .el-col-offset-2 {
     margin-left: 0%;
   }
+  .el-col-md-8{
+    padding-top: 16px;
+  }
 }
 </style>
