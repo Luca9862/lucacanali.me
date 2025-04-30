@@ -27,13 +27,13 @@
 
                     <v-spacer></v-spacer>
 
-                    <v-btn icon @click="toggle(index)">
+                    <v-btn icon @click="toggle(card1)">
                     <v-icon>{{ show[index] ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                     </v-btn>
                 </v-card-actions>
 
                 <v-expand-transition>
-                    <div v-show="show[index]">
+                    <div v-show="show.card1">
                     <v-divider></v-divider>
                     <v-card-text>
                         I'm a thing. But, like most politicians, he promised more than he could deliver...
@@ -64,13 +64,13 @@
 
                     <v-spacer></v-spacer>
 
-                    <v-btn icon @click="toggle(index)">
+                    <v-btn icon @click="toggle(card2)">
                     <v-icon>{{ show[index] ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                     </v-btn>
                 </v-card-actions>
 
                 <v-expand-transition>
-                    <div v-show="show[index]">
+                    <div v-show="show.card2">
                     <v-divider></v-divider>
                     <v-card-text>
                         I'm a thing. But, like most politicians, he promised more than he could deliver...
@@ -101,13 +101,13 @@
 
                     <v-spacer></v-spacer>
 
-                    <v-btn icon @click="toggle(index)">
+                    <v-btn icon @click="toggle(card3)">
                     <v-icon>{{ show[index] ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                     </v-btn>
                 </v-card-actions>
 
                 <v-expand-transition>
-                    <div v-show="show[index]">
+                    <div v-show="show.card3">
                     <v-divider></v-divider>
                     <v-card-text>
                         I'm a thing. But, like most politicians, he promised more than he could deliver...
@@ -136,7 +136,14 @@ export default {
     },
     data() {
         return {
-            show: false
+            card1: false,
+            card2: false,
+            card3: false
+        }
+    },
+    methods: {
+        toggle(cardKey) {
+            this.show[cardKey] = !this.show[cardKey];
         }
     }
 }
