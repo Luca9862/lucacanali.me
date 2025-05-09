@@ -38,10 +38,7 @@
                         <div v-show="showFirstCard">
                             <v-divider></v-divider>
                             <v-card-text>
-                                I'm a thing. But, like most politicians, he promised more than he could deliver. You
-                                won't have time for sleeping, soldier, not with all the bed making you'll be doing.
-                                Then we'll go with that data file! Hey, you add a one and two zeros to that or we
-                                walk! You're going to do his laundry? I've got to find a way to escape.
+                                MyPet is a university project developed at the University of Insubria as part of a mobile development course, utilizing Kotlin. This app allows users to monitor medical visits, keep track of vaccinations and medications, and even includes a built-in pedometer.
                             </v-card-text>
                         </div>
                     </v-expand-transition>
@@ -117,6 +114,9 @@
                         <div v-show="showThirdCard">
                             <v-divider></v-divider>
                             <v-card-text>
+                                This research aims to explore and analyze in detail the operation of Koivisto, with the goal of understanding its peculiarities, its capabilities, and its impact in the context of modern chess engines. Through this analysis, the aim is to contribute to the understanding of its architecture, its artificial intelligence techniques, and its performance.
+
+
                             </v-card-text>
                         </div>
                     </v-expand-transition>
