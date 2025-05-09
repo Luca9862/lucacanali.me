@@ -29,13 +29,13 @@
 
                         <v-spacer></v-spacer>
 
-                        <v-btn icon @click="show = !show">
-                            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                        <v-btn icon @click="showFirstCard = !showFirstCard">
+                            <v-icon>{{ showFirstCard ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                         </v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
-                        <div v-show="show">
+                        <div v-show="showFirstCard">
                             <v-divider></v-divider>
                             <v-card-text>
                                 I'm a thing. But, like most politicians, he promised more than he could deliver. You
@@ -70,13 +70,13 @@
 
                         <v-spacer></v-spacer>
 
-                        <v-btn icon @click="show = !show">
-                            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                        <v-btn icon @click="showSecondCard = !showSecondCard">
+                            <v-icon>{{ showSecondCard ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                         </v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
-                        <div v-show="show">
+                        <div v-show="showSecondCard">
                             <v-divider></v-divider>
                             <v-card-text>
                                 I'm a thing. But, like most politicians, he promised more than he could deliver. You
@@ -111,13 +111,13 @@
 
                         <v-spacer></v-spacer>
 
-                        <v-btn icon @click="show = !show">
-                            <v-icon>{{ show ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
+                        <v-btn icon @click="showThirdCard = !showThirdCard">
+                            <v-icon>{{ showThirdCard ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
                         </v-btn>
                     </v-card-actions>
 
                     <v-expand-transition>
-                        <div v-show="show">
+                        <div v-show="showThirdCard">
                             <v-divider></v-divider>
                             <v-card-text>
                             </v-card-text>
@@ -147,7 +147,9 @@ export default {
     },
     data() {
         return {
-            show: false,
+            showFirstCard: false,
+            showSecondCard: false,
+            showThirdCard: false,
             koivisto: koivisto
         }
     },
