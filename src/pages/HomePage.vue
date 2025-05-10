@@ -21,8 +21,8 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple">
-                            <v-icon dark @click="openLink('https://github.com/Luca9862/MyPet')">
+                        <v-btn class="mx-2" fab dark large color="purple" @click="openLink('https://github.com/Luca9862/MyPet')">
+                            <v-icon dark>
                                 mdi-github
                             </v-icon>
                         </v-btn>
@@ -59,8 +59,8 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple">
-                            <v-icon dark @click="openLink('https://github.com/Luca9862/pgn_manager_lib')">
+                        <v-btn class="mx-2" fab dark large color="purple" @click="openLink('https://github.com/Luca9862/pgn_manager_lib')">
+                            <v-icon dark>
                                 mdi-github
                             </v-icon>
                         </v-btn>
@@ -97,8 +97,8 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple">
-                            <v-icon dark @click="openLink('https://github.com/Luca9862/ChessEngineStudy_Koivisto')">
+                        <v-btn class="mx-2" fab dark large color="purple" @click="openLink('https://github.com/Luca9862/ChessEngineStudy_Koivisto')">
+                            <v-icon dark>
                                 mdi-github
                             </v-icon>
                         </v-btn>
@@ -115,8 +115,6 @@
                             <v-divider></v-divider>
                             <v-card-text>
                                 This research aims to explore and analyze in detail the operation of Koivisto, with the goal of understanding its peculiarities, its capabilities, and its impact in the context of modern chess engines. Through this analysis, the aim is to contribute to the understanding of its architecture, its artificial intelligence techniques, and its performance.
-
-
                             </v-card-text>
                         </div>
                     </v-expand-transition>
@@ -161,5 +159,10 @@ export default {
 <style>
 .app-info {
     padding-top: 100px;
+}
+
+.v-card__subtitle {
+    color: rgba(0, 0, 0, 0.6);
+    text-align: left;
 }
 </style>
