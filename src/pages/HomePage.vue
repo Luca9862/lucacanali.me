@@ -151,7 +151,7 @@ export default {
     methods:{
         openLink(url) {
             window.open(url, '_blank');
-    }
+        }
     }
 }
 </script>
