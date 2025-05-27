@@ -157,6 +157,10 @@ export default {
 </script>
 
 <style>
+.body{
+    font-family: 'Roboto', sans-serif;
+}
+
 .app-info {
     padding-top: 100px;
 }
