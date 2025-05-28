@@ -1,63 +1,57 @@
 <template>
-    <div class="info-home">
-        <hr style="opacity: 50%;">
-        <el-row style="width: 100%; text-align: left; padding-left: 12%;">
-            <el-col :span="12">
-                <div class="grid-content bg-purple" style="color: white;">
-                    <span style="opacity: 60%;"><!--Home--></span><br>
-                    <span style="opacity: 60%;"><!--Projects--></span><br>
-                    <span style="opacity: 60%;"><!--Info--></span><br>
-                    <span style="opacity: 60%;"><!--GitHub--></span>
-                </div>
-            </el-col>
-            <el-col :span="12" style="text-align: right; padding-right: 12%;">
-                <div class="grid-content bg-purple" style="color: white;">
-                    <a :href="linkedinUrl" target="_blank">
-                        <el-avatar :size="30" class="social-icon" :src="linkedinIcon" style="background-color: black;"></el-avatar>
-                    </a>
-                    <a :href="mediumUrl" target="_blank">
-                        <el-avatar :size="30" class="social-icon" :src="mediumIcon" style="background-color: white;"></el-avatar>
-                    </a>
-                    <a :href="instagramUrl" target="_blank">
-                        <el-avatar :size="30" class="social-icon" :src="instagramIcon" style="background-color: black;"></el-avatar>
-                    </a>
-                    <a :href="linktreeUrl" target="_blank">
-                        <el-avatar :size="30" class="social-icon" :src="linktreeIcon" style="background-color: black;"></el-avatar>        
-                    </a>
-                    <a :href="gmailUrl" target="_blank">
-                        <el-avatar :size="30" class="social-icon" :src="gmailIcon" style="background-color: black;"></el-avatar>        
-                    </a>
-                </div>
-            </el-col>        
-        </el-row>
-        <el-row style="width: 100%; text-align: center; color: white;">
-            <el-col :span="24" style="opacity: 40%; font-size: 13px;">
-                <span >Icon by </span><a target="_blank" href="https://icons8.com" style="color: white;">Icons8</a>
-            </el-col>
-        </el-row>
+    <div>
+        <v-footer dark padless>
+            <v-card class="flex" flat tile>
+                <v-card-title class="teal">
+                    <strong class="subheading">TEXT</strong>
+
+                    <v-spacer></v-spacer>
+
+                    <v-btn :href="icons[0].url" class="mx-4" dark icon>
+                        <v-img :src="icons[0].svg" max-width="24" alt="icon" class="ml-1"></v-img>
+                    </v-btn>
+                    <v-btn :href="icons[1].url" class="mx-4" dark icon>
+                        <v-icon size="24px">
+                            {{ icons[1].svg }}
+                        </v-icon>
+                    </v-btn>
+                    <v-btn :href="icons[2].url" class="mx-4" dark icon>
+                        <v-icon size="24px">
+                            {{ icons[2].svg }}
+                        </v-icon>
+                    </v-btn>
+                    <v-btn :href="icons[4].url" class="mx-4" dark icon>
+                        <v-icon size="24px">
+                            {{ icons[3].svg }}
+                        </v-icon>
+                    </v-btn>
+                    <v-btn class="mx-4" dark icon>
+                        <v-img :href="icons[4].url" :src="icons[4].svg" max-width="24" alt="icon" class="ml-1"></v-img>
+                    </v-btn>
+                </v-card-title>
+
+                <v-card-text class="py-2 white--text text-center">
+                    {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
+                </v-card-text>
+            </v-card>
+        </v-footer>
     </div>
 </template>
 
 <script>
-import linkedingPic from '../assets/icons/icons8-linkedin.svg'
-import instagramPic from '../assets/icons/icons8-instagram.svg'
-import linktreePic from '../assets/icons/icons8-linktree.svg'
+import linkTreeIcon from '../assets/icons/icons8-linktree.svg'
 import mediumPic from '../assets/icons/icons8-medium.svg'
-import gmailPic from '../assets/icons/icons8-gmail.svg'
 
 export default {
-    data(){
-        return{
-            linkedinIcon: linkedingPic,
-            instagramIcon: instagramPic,
-            linktreeIcon: linktreePic,
-            mediumIcon: mediumPic,
-            gmailIcon: gmailPic,
-            linkedinUrl: "https://www.linkedin.com/in/luca-canali-2bb755193/",
-            instagramUrl: "https://www.instagram.com/_luca.canali/",
-            linktreeUrl: "https://linktr.ee/lucacanali",
-            mediumUrl: "https://medium.com/@canali.luca998",
-            gmailUrl: "canali.luca998@gmail.com",
+    data() {
+        return {
+            icons: [
+                { svg: linkTreeIcon, url: 'https://linktr.ee/lucacanali' },
+                { svg: 'mdi-linkedin', url: 'https://www.linkedin.com/in/luca-canali-2bb755193/' },
+                { svg: 'mdi-instagram', url: 'https://www.instagram.com/_luca.canali/' },
+                { svg: 'mdi-gmail', url: 'canali.luca998@gmail.com' },
+                { svg: mediumPic, url: 'https://medium.com/@canali.luca998' },
+            ],
             text: 'I am 26 years old and a full-stack developer with experience in back-end, front-end, and databases. I occasionally work as a freelancer, building web applications and providing tailored solutions for various technological needs. I am passionate about technology and continually improving my skills by exploring new technologies and frameworks.'
         }
     }
@@ -66,25 +60,25 @@ export default {
 </script>
 
 <style>
-.info-home{
-    .el-descriptions-row{
-    background-color: black;
+.info-home {
+    .el-descriptions-row {
+        background-color: black;
+        color: white;
+    }
+
+}
+
+.text-item {
     color: white;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
-}
-.text-item{
-    color: white;   
-    font-family: Arial, Helvetica, sans-serif;   
-}
-
-.el-card{
+.el-card {
     background-color: darkgray !important;
 }
 
-.social-icon{
+.social-icon {
     cursor: pointer;
     margin: 3px;
 }
-
 </style>
