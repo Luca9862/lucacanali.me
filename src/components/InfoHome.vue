@@ -3,7 +3,7 @@
         <v-footer dark padless>
             <v-card class="flex" flat tile>
                 <v-card-title class="teal">
-                    <strong class="subheading">TEXT</strong>
+                    <strong class="subheading"></strong>
 
                     <v-spacer></v-spacer>
 
