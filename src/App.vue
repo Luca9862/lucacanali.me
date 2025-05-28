@@ -4,17 +4,20 @@
       <app-sidebar></app-sidebar>
     </header>
     <router-view></router-view>
+    <bottom-navigation></bottom-navigation>
   </div>
 </template>
 
 <script>
 import './assets/css/colors.css'
 import AppSidebar from './components/AppSidebar.vue';
+import BottomNavigation from './components/BottomNavigation.vue'
 
 export default {
   name: 'App',
   components: {
-    appSidebar: AppSidebar
+    appSidebar: AppSidebar,
+    bottomNavigation: BottomNavigation
   }
 }
 </script>

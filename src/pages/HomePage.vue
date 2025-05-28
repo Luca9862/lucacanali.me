@@ -21,7 +21,8 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple" @click="openLink('https://github.com/Luca9862/MyPet')">
+                        <v-btn class="mx-2" fab dark large color="purple"
+                            @click="openLink('https://github.com/Luca9862/MyPet')">
                             <v-icon dark>
                                 mdi-github
                             </v-icon>
@@ -38,7 +39,10 @@
                         <div v-show="showFirstCard">
                             <v-divider></v-divider>
                             <v-card-text>
-                                MyPet is a university project developed at the University of Insubria as part of a mobile development course, utilizing Kotlin. This app allows users to monitor medical visits, keep track of vaccinations and medications, and even includes a built-in pedometer.
+                                MyPet is a university project developed at the University of Insubria as part of a
+                                mobile development course, utilizing Kotlin. This app allows users to monitor medical
+                                visits, keep track of vaccinations and medications, and even includes a built-in
+                                pedometer.
                             </v-card-text>
                         </div>
                     </v-expand-transition>
@@ -59,7 +63,8 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple" @click="openLink('https://github.com/Luca9862/pgn_manager_lib')">
+                        <v-btn class="mx-2" fab dark large color="purple"
+                            @click="openLink('https://github.com/Luca9862/pgn_manager_lib')">
                             <v-icon dark>
                                 mdi-github
                             </v-icon>
@@ -76,7 +81,10 @@
                         <div v-show="showSecondCard">
                             <v-divider></v-divider>
                             <v-card-text>
-                                A user-friendly Python library for basic PGN (chess) file handling - PGN stands for Portable Game Notation, a standard plain text format for recording chess games. It includes the moves of the game as well as metadata such as the players, the event, the date, and the result.
+                                A user-friendly Python library for basic PGN (chess) file handling - PGN stands for
+                                Portable Game Notation, a standard plain text format for recording chess games. It
+                                includes the moves of the game as well as metadata such as the players, the event, the
+                                date, and the result.
                             </v-card-text>
                         </div>
                     </v-expand-transition>
@@ -97,7 +105,8 @@
                     </v-card-subtitle>
 
                     <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple" @click="openLink('https://github.com/Luca9862/ChessEngineStudy_Koivisto')">
+                        <v-btn class="mx-2" fab dark large color="purple"
+                            @click="openLink('https://github.com/Luca9862/ChessEngineStudy_Koivisto')">
                             <v-icon dark>
                                 mdi-github
                             </v-icon>
@@ -114,17 +123,15 @@
                         <div v-show="showThirdCard">
                             <v-divider></v-divider>
                             <v-card-text>
-                                This research aims to explore and analyze in detail the operation of Koivisto, with the goal of understanding its peculiarities, its capabilities, and its impact in the context of modern chess engines. Through this analysis, the aim is to contribute to the understanding of its architecture, its artificial intelligence techniques, and its performance.
+                                This research aims to explore and analyze in detail the operation of Koivisto, with the
+                                goal of understanding its peculiarities, its capabilities, and its impact in the context
+                                of modern chess engines. Through this analysis, the aim is to contribute to the
+                                understanding of its architecture, its artificial intelligence techniques, and its
+                                performance.
                             </v-card-text>
                         </div>
                     </v-expand-transition>
                 </v-card>
-            </v-col>
-        </v-row>
-
-        <v-row>
-            <v-col cols="12">
-                <div class="app-info"><app-info></app-info></div>
             </v-col>
         </v-row>
     </div>
@@ -132,13 +139,11 @@
 
 <script>
 import AppCarosello from '@/components/AppCarosello.vue';
-import InfoHome from '@/components/InfoHome.vue';
 import koivisto from '../assets/pictures/koivisto.png'
 
 export default {
     components: {
-        appCarosello: AppCarosello,
-        appInfo: InfoHome
+        appCarosello: AppCarosello
     },
     data() {
         return {
@@ -148,7 +153,7 @@ export default {
             koivisto: koivisto
         }
     },
-    methods:{
+    methods: {
         openLink(url) {
             window.open(url, '_blank');
         }
@@ -157,7 +162,7 @@ export default {
 </script>
 
 <style>
-.body{
+.body {
     font-family: 'Roboto', sans-serif;
 }
 

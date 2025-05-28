@@ -90,6 +90,7 @@ export default {
     flex-grow: 1;
     /* Il menu si espanderà per occupare lo spazio disponibile */
     margin-left: 20px;
+    font-weight: bold;
   }
 }
 </style>
