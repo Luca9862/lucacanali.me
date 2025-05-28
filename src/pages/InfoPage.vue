@@ -1,4 +1,4 @@
-<template>
+<!-- <template>
     <div>
         <el-row style="padding-top: 80px;">
             <el-col :span="24" style="padding-right: 20px; padding-left: 10px;">
@@ -44,6 +44,41 @@
 
         </el-row>
     </div>
+</template> -->
+
+<template>
+    <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
+        <v-timeline-item fill-dot>
+            <v-card dark>
+                <v-card-title class="text-h6">
+                    Full-stack developer - Elmec Informatica, Brunello(VA)
+                </v-card-title>
+                <v-card-text class="white text--primary">
+                    <p>C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>Start: march 2024</p>
+                </v-card-text>
+            </v-card>
+        </v-timeline-item>
+        <v-timeline-item fill-dot>
+            <v-card dark>
+                <v-card-title class="text-h6">
+                    University of Insubria - Bachelor's Degree in Computer Science
+                </v-card-title>
+                <v-card-text class="white text--primary">
+                    <p>C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>Start: september 2020</p>
+                </v-card-text>
+            </v-card>
+        </v-timeline-item>
+        <v-timeline-item fill-dot>
+            <v-card dark>
+                <v-card-title class="text-h6">
+                    High School Diploma in Business Administration, Finance, and Marketing
+                </v-card-title>
+                <v-card-text class="white text--primary">
+                    <p></p>
+                </v-card-text>
+            </v-card>
+        </v-timeline-item>
+    </v-timeline>
 </template>
 
 <script>
@@ -55,9 +90,27 @@ import linkedingPic from '../assets/icons/icons8-linkedin.svg'
 
 
 
-export default{
-    data(){
-        return{
+export default {
+    data() {
+        return {
+            items: [
+                {
+                    color: 'red lighten-2',
+                    icon: 'mdi-star',
+                },
+                {
+                    color: 'purple darken-1',
+                    icon: 'mdi-book-variant',
+                },
+                {
+                    color: 'green lighten-1',
+                    icon: 'mdi-airballoon',
+                },
+                {
+                    color: 'indigo',
+                    icon: 'mdi-buffer',
+                },
+            ],
             vueIcon: vuePic,
             javaIcon: javaPic,
             cSharpIcon: cSharpPic,
@@ -65,11 +118,16 @@ export default{
             linkedinIcon: linkedingPic
         }
     },
-    components:{
+    components: {
     }
 }
 </script>
 
 <style>
-
+.v-timeline::before {
+    background-color: white !important;
+    width: 1px !important;
+    justify-self: anchor-center;
+    /* aumenta lo spessore */
+}
 </style>
