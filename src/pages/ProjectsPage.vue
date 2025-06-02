@@ -221,7 +221,7 @@
                         <div v-show="showSixthCard">
                             <v-divider></v-divider>
                             <v-card-text>
-                                Roll_dice is a simple Flutter application that simulates the roll of a six-sided die
+                                RollDice is a simple Flutter application that simulates the roll of a six-sided die
                             </v-card-text>
                         </div>
                     </v-expand-transition>
