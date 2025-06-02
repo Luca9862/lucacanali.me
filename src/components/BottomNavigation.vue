@@ -3,13 +3,13 @@
         <v-footer dark padless>
             <v-card class="flex" flat tile>
                 <div style="justify-self: center;">
-                    <v-btn color="white" text rounded class="my-2">
+                    <v-btn @click="goToHome" color="white" text rounded class="my-2">
                         Home
                     </v-btn>
-                    <v-btn color="white" text rounded class="my-2">
+                    <v-btn @click="goToProjects" color="white" text rounded class="my-2">
                         Projects
                     </v-btn>
-                    <v-btn color="white" text rounded class="my-2">
+                    <v-btn @click="goToInfo" color="white" text rounded class="my-2">
                         info
                     </v-btn>
                 </div>
@@ -66,6 +66,23 @@ export default {
             ],
             text: 'I am 26 years old and a full-stack developer with experience in back-end, front-end, and databases. I occasionally work as a freelancer, building web applications and providing tailored solutions for various technological needs. I am passionate about technology and continually improving my skills by exploring new technologies and frameworks.'
         }
+    },
+    methods:{
+    goToHome() {
+      if (this.$route.path !== '/home') {
+        this.$router.push('/home');
+      }
+    },
+    goToProjects() {
+      if (this.$route.path !== '/projects') {
+        this.$router.push('/projects');
+      }
+    },
+    goToInfo() {
+      if (this.$route.path !== '/info') {
+        this.$router.push('/info');
+      }
+    }
     }
 
 }
