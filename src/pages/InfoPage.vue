@@ -113,9 +113,11 @@ export default {
     justify-self: anchor-center;
     /* aumenta lo spessore */
 }
+/*
 @media (max-width: 600px) {
   .v-timeline-item__dot {
     display: none !important;
   }
 }
+  */
 </style>
