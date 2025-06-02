@@ -1,13 +1,13 @@
 <template>
     <div>
-        <v-timeline align-top :dense="$vuetify.breakpoint.smAndDown">
+        <v-timeline align-top>
             <v-timeline-item fill-dot>
                 <v-card dark>
                     <v-card-title class="text-h6">
                         Full-stack developer - Elmec Informatica, Brunello(VA)
                     </v-card-title>
                     <v-card-text class="white text--primary">
-                        <p>C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>march 2024 -
+                        <p>C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>March 2024 -
                             present</p>
                     </v-card-text>
                 </v-card>
@@ -18,7 +18,7 @@
                         University of Insubria - Bachelor's Degree in Computer Science
                     </v-card-title>
                     <v-card-text class="white text--primary">
-                        <p>C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>september 2020 - july 2024</p>
+                        <p>C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>September 2020 - July 2024</p>
                     </v-card-text>
                 </v-card>
             </v-timeline-item>
@@ -28,7 +28,7 @@
                         High School Diploma in Business Administration, Finance, and Marketing
                     </v-card-title>
                     <v-card-text class="white text--primary">
-                        <p>june 2020</p>
+                        <p>June 2020</p>
                     </v-card-text>
                 </v-card>
             </v-timeline-item>
@@ -113,11 +113,22 @@ export default {
     justify-self: anchor-center;
     /* aumenta lo spessore */
 }
-/*
-@media (max-width: 600px) {
+
+@media (max-width: 959px) {
   .v-timeline-item__dot {
     display: none !important;
+    position: absolute !important; /* fuori dal layout */
   }
+  .v-timeline-item__divider{
+    width: 0px;
+    position: absolute;
+  }
+  .v-timeline-item {
+    padding-left: 0px !important;
+    margin-left: 0px !important;
+        flex-basis: 100% !important;
+
 }
-  */
+}
+  
 </style>
