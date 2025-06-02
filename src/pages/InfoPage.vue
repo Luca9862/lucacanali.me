@@ -161,10 +161,13 @@ export default {
     word-break: break-word;
     padding-bottom: 0px !important;
 }
-.v-timeline::before {
+@media (min-width: 700px) {
+  .v-timeline::before {
     background-color: white !important;
     width: 1px !important;
     justify-self: anchor-center;
+  }
 }
+
   
 </style>
