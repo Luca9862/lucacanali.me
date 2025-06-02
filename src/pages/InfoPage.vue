@@ -1,38 +1,82 @@
 <template>
-    <div>
-        <v-timeline align-top>
-            <v-timeline-item fill-dot>
-                <v-card dark>
-                    <v-card-title class="text-h6">
-                        Full-stack developer - Elmec Informatica, Brunello(VA)
-                    </v-card-title>
-                    <v-card-text class="white text--primary">
-                        <p>C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>March 2024 -
-                            present</p>
-                    </v-card-text>
-                </v-card>
-            </v-timeline-item>
-            <v-timeline-item fill-dot>
-                <v-card dark>
-                    <v-card-title class="text-h6">
-                        University of Insubria - Bachelor's Degree in Computer Science
-                    </v-card-title>
-                    <v-card-text class="white text--primary">
-                        <p>C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>September 2020 - July 2024</p>
-                    </v-card-text>
-                </v-card>
-            </v-timeline-item>
-            <v-timeline-item fill-dot>
-                <v-card dark>
-                    <v-card-title class="text-h6">
-                        High School Diploma in Business Administration, Finance, and Marketing
-                    </v-card-title>
-                    <v-card-text class="white text--primary">
-                        <p>June 2020</p>
-                    </v-card-text>
-                </v-card>
-            </v-timeline-item>
-        </v-timeline>
+    <div class="timeline">
+        <div v-if="$vuetify.breakpoint.width < 700">
+            <v-timeline
+            :reverse="reverse"
+            dense
+            >
+                <v-timeline-item fill-dot>
+                    <v-card dark>
+                        <v-card-title class="text-h6" style="font-weight: bold;">
+                            <span>Full-stack developer</span>                            
+                        </v-card-title>
+                        <span class="subtitle">Elmec Informatica, Brunello(VA)</span>
+                        <v-card-text class="white text--primary">
+                            <p>C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>March 2024 -
+                                present</p>
+                        </v-card-text>
+                    </v-card>
+                </v-timeline-item>
+                <v-timeline-item fill-dot>
+                    <v-card dark>
+                        <v-card-title class="text-h6" style="font-weight: bold;">
+                            <span>Bachelor's Degree in Computer Science</span>                            
+                        </v-card-title>
+                        <span class="subtitle">University of Insubria</span>
+                        <v-card-text class="white text--primary">
+                            <p>C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>September 2020 - July 2024</p>
+                        </v-card-text>
+                    </v-card>
+                </v-timeline-item>
+                <v-timeline-item fill-dot>
+                    <v-card dark>
+                        <v-card-title class="text-h6" style="font-weight: bold;">
+                            <span>High School Diploma in Business Administration, Finance, and Marketing</span>                            
+                        </v-card-title>
+                        <v-card-text class="white text--primary">
+                            <p>June 2020</p>
+                        </v-card-text>
+                    </v-card>
+                </v-timeline-item>
+            </v-timeline>
+        </div>
+        <div v-else>
+            <v-timeline align-top>
+                <v-timeline-item fill-dot>
+                    <v-card dark>
+                        <v-card-title class="text-h6" style="font-weight: bold;">
+                            <span>Full-stack developer</span>                            
+                        </v-card-title>
+                        <span class="subtitle">Elmec Informatica, Brunello(VA)</span>
+                        <v-card-text class="white text--primary">
+                            <p>C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>March 2024 -
+                                present</p>
+                        </v-card-text>
+                    </v-card>
+                </v-timeline-item>
+                <v-timeline-item fill-dot>
+                    <v-card dark>
+                        <v-card-title class="text-h6" style="font-weight: bold;">
+                            <span>Bachelor's Degree in Computer Science</span>                            
+                        </v-card-title>
+                        <span class="subtitle">University of Insubria - Varese</span>
+                        <v-card-text class="white text--primary">
+                            <p>C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>September 2020 - July 2024</p>
+                        </v-card-text>
+                    </v-card>
+                </v-timeline-item>
+                <v-timeline-item fill-dot>
+                    <v-card dark>
+                        <v-card-title class="text-h6" style="font-weight: bold;">
+                            <span>High School Diploma in Business Administration, Finance, and Marketing</span>                            
+                        </v-card-title>
+                        <v-card-text class="white text--primary">
+                            <p>June 2020</p>
+                        </v-card-text>
+                    </v-card>
+                </v-timeline-item>
+            </v-timeline>
+        </div>
         <p style="text-align: center; padding-top: 100px ;color: white;">My name is Luca, I’m 26 years old and a
             full-stack developer with
             solid experience in back-end, front-end, and database management. Over the years, I’ve been designing and
@@ -107,28 +151,20 @@ export default {
 </script>
 
 <style>
+.subtitle{
+    padding-left: 16px;
+    font-size: 16px; 
+    font-weight: 100;
+    word-break: break-word;
+}
+.v-card__title{
+    word-break: break-word;
+    padding-bottom: 0px !important;
+}
 .v-timeline::before {
     background-color: white !important;
     width: 1px !important;
     justify-self: anchor-center;
-    /* aumenta lo spessore */
-}
-
-@media (max-width: 959px) {
-  .v-timeline-item__dot {
-    display: none !important;
-    position: absolute !important; /* fuori dal layout */
-  }
-  .v-timeline-item__divider{
-    width: 0px;
-    position: absolute;
-  }
-  .v-timeline-item {
-    padding-left: 0px !important;
-    margin-left: 0px !important;
-        flex-basis: 100% !important;
-
-}
 }
   
 </style>
