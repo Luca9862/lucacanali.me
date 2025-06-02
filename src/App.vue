@@ -4,7 +4,9 @@
       <app-sidebar></app-sidebar>
     </header>
     <router-view></router-view>
-    <bottom-navigation></bottom-navigation>
+    <footer>
+      <bottom-navigation></bottom-navigation>
+    </footer>
   </div>
 </template>
 
@@ -23,7 +25,8 @@ export default {
 </script>
 
 <style>
-html, #app{
+html,
+#app {
   background-color: background-color;
   font-family: sans-serif;
 }
