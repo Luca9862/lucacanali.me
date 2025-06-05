@@ -84,6 +84,12 @@ export default {
     background-color: #1E1E1E !important;
 }
 
+.v-application .purple {
+    background-color: black !important;
+    border-color: black !important;
+}
+
+
 .text-item {
     color: white;
     font-family: sans-serif;
