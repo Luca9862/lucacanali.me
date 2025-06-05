@@ -1,33 +1,36 @@
 <template>
-  <div id="app">
-    <header>
-      <app-sidebar></app-sidebar>
-    </header>
-    <router-view></router-view>
-    <footer>
-      <bottom-navigation></bottom-navigation>
-    </footer>
-  </div>
+  <v-app class="d-flex flex-column fill-height">
+    <!-- Sidebar o Navbar -->
+    <app-sidebar />
+
+    <!-- Contenuto principale -->
+    <v-main class="flex-grow-1">
+      <router-view />
+    </v-main>
+
+    <!-- Footer sempre in fondo -->
+    <bottom-navigation />
+  </v-app>
 </template>
 
 <script>
-import './assets/css/colors.css'
-import AppSidebar from './components/AppSidebar.vue';
+import AppSidebar from './components/AppSidebar.vue'
 import BottomNavigation from './components/BottomNavigation.vue'
 
 export default {
   name: 'App',
   components: {
-    appSidebar: AppSidebar,
-    bottomNavigation: BottomNavigation
+    AppSidebar,
+    BottomNavigation
   }
 }
 </script>
 
 <style>
-html,
-#app {
-  background-color: background-color;
-  font-family: sans-serif;
+/* Assicura che l'app abbia altezza piena */
+html, body, #app {
+  height: 100%;
+  margin: 0;
+  background-color: black;
 }
 </style>

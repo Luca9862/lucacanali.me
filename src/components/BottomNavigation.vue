@@ -42,8 +42,8 @@
                     </v-btn>
                 </v-card-title>
 
-                <v-card-text class="py-2 white--text text-center">
-                    Last update: 28/05/2025
+                <v-card-text class="py-2 white--text text-center" style="text-align-last: left;">
+                    1.2.0
                 </v-card-text>
             </v-card>
         </v-footer>
@@ -78,6 +78,10 @@ export default {
         color: white;
     }
 
+}
+
+.v-application .teal{
+    background-color: #1E1E1E !important;
 }
 
 .text-item {
