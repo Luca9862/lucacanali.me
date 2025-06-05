@@ -1,25 +1,31 @@
 <template>
   <div id="app">
-    <header>
-      <app-sidebar></app-sidebar>
-    </header>
-    <router-view></router-view>
-    <footer>
-      <bottom-navigation></bottom-navigation>
-    </footer>
+    <div class="app-wrapper">
+      <header>
+        <app-sidebar></app-sidebar>
+      </header>
+
+      <main class="main-content">
+        <router-view></router-view>
+      </main>
+
+      <footer>
+        <bottom-navigation></bottom-navigation>
+      </footer>
+    </div>
   </div>
 </template>
 
+
 <script>
-import './assets/css/colors.css'
-import AppSidebar from './components/AppSidebar.vue';
+import AppSidebar from './components/AppSidebar.vue'
 import BottomNavigation from './components/BottomNavigation.vue'
 
 export default {
   name: 'App',
   components: {
-    appSidebar: AppSidebar,
-    bottomNavigation: BottomNavigation
+    AppSidebar,
+    BottomNavigation
   }
 }
 </script>
@@ -29,5 +35,17 @@ html,
 #app {
   background-color: background-color;
   font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* prende tutto lo spazio disponibile */
 }
 </style>
