@@ -1,17 +1,21 @@
 <template>
-  <v-app class="d-flex flex-column fill-height">
-    <!-- Sidebar o Navbar -->
-    <app-sidebar />
+  <div id="app">
+    <div class="app-wrapper">
+      <header>
+        <app-sidebar></app-sidebar>
+      </header>
 
-    <!-- Contenuto principale -->
-    <v-main class="flex-grow-1">
-      <router-view />
-    </v-main>
+      <main class="main-content">
+        <router-view></router-view>
+      </main>
 
-    <!-- Footer sempre in fondo -->
-    <bottom-navigation />
-  </v-app>
+      <footer>
+        <bottom-navigation></bottom-navigation>
+      </footer>
+    </div>
+  </div>
 </template>
+
 
 <script>
 import AppSidebar from './components/AppSidebar.vue'
@@ -27,10 +31,21 @@ export default {
 </script>
 
 <style>
-/* Assicura che l'app abbia altezza piena */
-html, body, #app {
-  height: 100%;
-  margin: 0;
-  background-color: black;
+html,
+#app {
+  background-color: background-color;
+  font-family: sans-serif;
+  font-family: 'Roboto', sans-serif;
+  height: 100vh;
+}
+
+.app-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1; /* prende tutto lo spazio disponibile */
 }
 </style>
