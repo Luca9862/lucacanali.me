@@ -1,44 +1,42 @@
 <template>
     <div class="timeline">
         <div v-if="$vuetify.breakpoint.width < 700">
-            <v-timeline
-            :reverse="reverse"
-            dense
-            >
-                <v-timeline-item fill-dot>
-                    <v-card dark>
-                        <v-card-title class="text-h6" style="font-weight: bold;">
-                            <span>Full-stack developer</span>                            
-                        </v-card-title>
-                        <span class="subtitle">Elmec Informatica, Brunello(VA)</span>
-                        <v-card-text class="white text--primary">
-                            <p>C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>March 2024 -
-                                present</p>
-                        </v-card-text>
-                    </v-card>
-                </v-timeline-item>
-                <v-timeline-item fill-dot>
-                    <v-card dark>
-                        <v-card-title class="text-h6" style="font-weight: bold;">
-                            <span>Bachelor's Degree in Computer Science</span>                            
-                        </v-card-title>
-                        <span class="subtitle">University of Insubria</span>
-                        <v-card-text class="white text--primary">
-                            <p>C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>September 2020 - July 2024</p>
-                        </v-card-text>
-                    </v-card>
-                </v-timeline-item>
-                <v-timeline-item fill-dot>
-                    <v-card dark>
-                        <v-card-title class="text-h6" style="font-weight: bold;">
-                            <span>High School Diploma in Business Administration, Finance, and Marketing</span>                            
-                        </v-card-title>
-                        <v-card-text class="white text--primary">
-                            <p>June 2020</p>
-                        </v-card-text>
-                    </v-card>
-                </v-timeline-item>
-            </v-timeline>
+            <v-container fluid>
+                <v-card class="mb-4" dark>
+                <v-card-title class="text-h6" style="font-weight: bold;">
+                    <span>Full-stack developer</span>
+                </v-card-title>
+                <span class="subtitle">Elmec Informatica, Brunello(VA)</span>
+                <v-card-text class="white text--primary">
+                    <p>
+                    C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>
+                    March 2024 - present
+                    </p>
+                </v-card-text>
+                </v-card>
+
+                <v-card class="mb-4" dark style="margin-top: 16px;">
+                <v-card-title class="text-h6" style="font-weight: bold;">
+                    <span>Bachelor's Degree in Computer Science</span>
+                </v-card-title>
+                <span class="subtitle">University of Insubria</span>
+                <v-card-text class="white text--primary">
+                    <p>
+                    C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>
+                    September 2020 - July 2024
+                    </p>
+                </v-card-text>
+                </v-card>
+
+                <v-card class="mb-4" dark style="margin-top: 16px;">
+                <v-card-title class="text-h6" style="font-weight: bold;">
+                    <span>High School Diploma in Business Administration, Finance, and Marketing</span>
+                </v-card-title>
+                <v-card-text class="white text--primary">
+                    <p>June 2020</p>
+                </v-card-text>
+                </v-card>
+            </v-container>
         </div>
         <div v-else>
             <v-timeline align-top>
@@ -77,7 +75,7 @@
                 </v-timeline-item>
             </v-timeline>
         </div>
-        <p style="text-align: center; padding-top: 100px ;color: white;">My name is Luca, I’m 26 years old and a
+        <p style="text-align: center; padding-top: 60px ;color: white;">My name is Luca, I’m 26 years old and a
             full-stack developer with
             solid experience in back-end, front-end, and database management. Over the years, I’ve been designing and
             developing web applications, combining technical expertise with attention to detail to deliver tailor-made
