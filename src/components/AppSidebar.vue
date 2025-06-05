@@ -5,9 +5,6 @@
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
         <v-toolbar-title style="font-weight: bold;">Luca Canali</v-toolbar-title> 
-        <v-avatar size="40" style="margin-left: 10px;">
-          <img src="../assets/pictures/avatar.jpg" alt="John">
-        </v-avatar>
       </v-app-bar>
 
       <v-navigation-drawer v-model="drawer" absolute temporary>
