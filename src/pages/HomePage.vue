@@ -2,10 +2,17 @@
     <div>
         <v-row>
             <v-col cols="12">
-                <div class="grid-content bg-purple-dark"><app-carosello></app-carosello></div>
+                <div style="padding-top: 10px;">
+                    <v-img
+                    src="../assets/pictures/cover.png"
+                    max-height="500"
+                    max-width="100%"
+                    contain
+                    class="cover-image"
+                    ></v-img>
+                </div>
             </v-col>
         </v-row>
-
         <v-row style="text-align: -webkit-center;">
             <!-- Card 1 -->
             <v-col xs="12" sm="6" md="4" class="pa-2">
@@ -138,13 +145,9 @@
 </template>
 
 <script>
-import AppCarosello from '@/components/AppCarosello.vue';
 import koivisto from '../assets/pictures/koivisto.png'
 
 export default {
-    components: {
-        appCarosello: AppCarosello
-    },
     data() {
         return {
             showFirstCard: false,
