@@ -7,7 +7,7 @@
         <v-toolbar-title style="font-weight: bold;">Luca Canali</v-toolbar-title> 
       </v-app-bar>
 
-      <v-navigation-drawer v-model="drawer" absolute temporary>
+      <v-navigation-drawer v-model="drawer" absolute temporary class="dark-drawer">
         <v-list nav dense>
           <v-list-item-group active-class="deep-purple--text text--accent-4">
 
@@ -143,8 +143,17 @@ export default {
 
 
 }
+.v-list-item{
+  .v-list-item__title{
+      color: white;
+  }
+}
+.v-icon.v-icon {
+  color: white;
+}
+
 
 .v-navigation-drawer__content {
-  background: #f2f2f2;
+  background: #1E1E1E;
 }
 </style>
