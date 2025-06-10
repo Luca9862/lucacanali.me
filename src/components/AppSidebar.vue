@@ -4,7 +4,7 @@
       <v-app-bar color="deep-purple" dark>
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
 
-        <v-toolbar-title style="font-weight: bold;">Luca Canali</v-toolbar-title> 
+        <v-toolbar-title class="title-mobile">Luca Canali</v-toolbar-title> 
       </v-app-bar>
 
       <v-navigation-drawer v-model="drawer" absolute temporary class="dark-drawer">
@@ -44,23 +44,36 @@
     </div>
 
     <div v-else id="sidebar">
-      <div class="header-container">
-        <!-- Avatar e nome -->
-        <div class="avatar-name-container">
-          <el-avatar :size="40" :src="circleUrl"></el-avatar>
-        </div>
+      <!---->
+      <v-app-bar
+        color="#1E1E1E"
+        dark
+      >
 
-        <!-- Menu -->
-        <el-menu class="el-menu-demo" mode="horizontal" background-color="black" text-color="#fff"
-          active-text-color="#ffd04b">
-          <el-menu-item @click="goToHome" style="font-size: x-large;">Luca Canali</el-menu-item>
-          <el-menu-item @click="goToHome" style="font-size: large;">Home</el-menu-item>
-          <el-menu-item @click="goToProjects" style="font-size: large;">Projects</el-menu-item>
-          <el-menu-item @click="goToInfo" style="font-size: large;">Info</el-menu-item>
-          <el-menu-item @click="goToGithub" style="color: grey;"><span style="padding-right: 8%;">GitHub</span><i
-              class="fa-solid fa-arrow-up-right-from-square"></i></el-menu-item>
-        </el-menu>
-      </div>
+        <template v-slot:extension>
+          <span class="title-desktop">Luca Canali</span>
+          <v-tabs
+            v-model="activeTab"
+            background-color="#1E1E1E"
+            dark
+          >
+            <v-tab value="/home" to="/home">Home</v-tab>
+            <v-tab value="/projects" to="/projects">Projects</v-tab>
+            <v-tab value="/info" to="/info">Info</v-tab>
+          </v-tabs>
+          <v-btn icon :href="'https://linktr.ee/lucacanali'" target="_blank">
+              <img :src="linkTreeIcon" alt="LinkTree" style="width: 24px; height: 24px;" />
+          </v-btn>
+
+          <v-btn icon @click="goToGithub">
+              <v-icon>mdi-github</v-icon>
+          </v-btn>
+
+          <v-btn icon :href="'https://www.linkedin.com/in/luca-canali-2bb755193/'">
+              <v-icon>mdi-linkedin</v-icon>
+          </v-btn>
+        </template>
+      </v-app-bar>
     </div>
   </div>
 
@@ -70,6 +83,7 @@
 import avatar from '../assets/pictures/avatar.jpg'
 import gitPic from '../assets/icons/github-mark-white.svg'
 import '../assets/css/colors.css'
+import linkTreeIcon from '../assets/icons/icons8-linktree.svg'
 
 export default {
   data() {
@@ -77,8 +91,16 @@ export default {
       circleUrl: avatar,
       githubProfile: "https://github.com/Luca9862",
       githubPicture: gitPic,
-      drawer: false
+      drawer: false,
+      linkTreeIcon: linkTreeIcon,
+      activeTab: this.$route.path
+
     };
+  },
+  watch: {
+    '$route.path'(newPath) {
+      this.activeTab = newPath;
+    }
   },
   methods: {
     goToEmpty() {
@@ -155,5 +177,38 @@ export default {
 
 .v-navigation-drawer__content {
   background: #1E1E1E;
+}
+
+.v-app-bar-title__content {
+    position: absolute;
+}
+
+@media (min-width: 696px) {
+  .v-toolbar__content {
+      display: none;
+  }
+
+  .v-app-bar {
+    height: auto !important;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .v-tabs-slider {
+    display: none;
+  }
+}
+
+.title-desktop{
+    white-space: nowrap;
+    width: auto;
+    /* padding-right: 10px; */
+    font-size: 22px;
+    padding-right: 22px;
+    font-weight: bold;
+}
+
+.title-mobile{
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  font-weight: bold;
 }
 </style>

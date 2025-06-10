@@ -1,5 +1,5 @@
 <template>
-    <div style="padding-top: 100px;">
+    <div id="bottom-nav" style="padding-top: 100px; font-family: Avenir, Helvetica, Arial, sans-serif;">
         <v-footer dark padless>
             <v-card class="flex" flat tile>
                 <div style="justify-self: center;">
@@ -88,14 +88,7 @@ export default {
 }
 </script>
 
-<style>
-.info-home {
-    .el-descriptions-row {
-        background-color: black;
-        color: white;
-    }
-
-}
+<style scoped>
 
 .v-application .teal{
     background-color: #1E1E1E !important;

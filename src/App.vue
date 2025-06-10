@@ -1,7 +1,7 @@
 <template>
   <div id="app">
     <div class="app-wrapper">
-      <header>
+      <header class="header-content">
         <app-sidebar></app-sidebar>
       </header>
 
@@ -34,8 +34,7 @@ export default {
 html,
 #app {
   background-color: background-color;
-  font-family: sans-serif;
-  font-family: 'Roboto', sans-serif;
+  font-family: Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
 }
 
@@ -47,5 +46,10 @@ html,
 
 .main-content {
   flex: 1; /* prende tutto lo spazio disponibile */
+  padding: 32px;
+}
+
+.header-content{
+  height: auto !important;
 }
 </style>
