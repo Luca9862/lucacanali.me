@@ -203,7 +203,7 @@ export default {
     width: auto;
     /* padding-right: 10px; */
     font-size: 22px;
-    padding-right: 22px;
+    padding-right: 30px;
     font-weight: bold;
 }
 
