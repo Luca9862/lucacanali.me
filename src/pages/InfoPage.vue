@@ -9,8 +9,8 @@
                 <span class="subtitle">Elmec Informatica, Brunello(VA)</span>
                 <v-card-text class="white text--primary">
                     <p>
-                    C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>
-                    March 2024 - present
+                        C#, .NET, Java, Javascript, Typescript, Vue2, Vue3, Flutter, SQL <br><br>
+                        March 2024 - present
                     </p>
                 </v-card-text>
                 </v-card>
@@ -22,8 +22,8 @@
                 <span class="subtitle">University of Insubria</span>
                 <v-card-text class="white text--primary">
                     <p>
-                    C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>
-                    September 2020 - July 2024
+                        C, C++, Scala, Java, SQL, Kotlin, Data Science <br><br>
+                        September 2020 - July 2024
                     </p>
                 </v-card-text>
                 </v-card>
@@ -47,7 +47,7 @@
                         </v-card-title>
                         <span class="subtitle">Elmec Informatica, Brunello(VA)</span>
                         <v-card-text class="white text--primary">
-                            <p>C#, .NET, Java, Javascript, Vue2, Vue3, Quasar, Flutter, SQL, Data <br><br>March 2024 -
+                            <p>C#, .NET, Java, Javascript, Typescript, Vue2, Vue3, Flutter, SQL <br><br>March 2024 -
                                 present</p>
                         </v-card-text>
                     </v-card>
@@ -75,14 +75,11 @@
                 </v-timeline-item>
             </v-timeline>
         </div>
-        <p style="text-align: center; padding-top: 60px ;color: white;">My name is Luca, I’m 26 years old and a
+        <p style="text-align: center; padding-top: 60px ;color: white;">My name is Luca and I'm a
             full-stack developer with
             solid experience in back-end, front-end, and database management. Over the years, I’ve been designing and
             developing web applications, combining technical expertise with attention to detail to deliver tailor-made
             and functional solutions.<br><br>
-            I have worked in both structured teams and independently, collaborating with companies and private clients
-            on projects of various kinds. I also occasionally work as a freelancer, offering personalized consulting and
-            developing digital products that meet specific client needs.<br><br>
             I’m passionate about technology and continuously learning — I enjoy exploring new frameworks, programming
             languages, and tools that can enhance the quality of my work and make me more versatile and effective. I
             believe in lifelong learning and knowledge sharing, values that I bring into every project I take
