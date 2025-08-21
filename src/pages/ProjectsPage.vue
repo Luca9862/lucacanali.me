@@ -34,7 +34,7 @@
                             <v-card-text>
                                 MyPet is a university project developed at the University of Insubria as part of a mobile development course, utilizing Kotlin. This app allows users to monitor medical visits, keep track of vaccinations and medications, and even includes a built-in pedometer.
                             </v-card-text>
-                            <v-btn style="margin-bottom: 16px;" class="mx-2" dark large @click="openLink('https://github.com/Luca9862/MyPet')">
+                            <!-- <v-btn style="margin-bottom: 16px;" class="mx-2" dark large @click="openLink('https://github.com/Luca9862/MyPet')">
                                 <v-icon left dark>
                                     mdi-android
                                 </v-icon>
@@ -45,7 +45,7 @@
                                 >
                                     mdi-cloud-download
                                 </v-icon>
-                            </v-btn>
+                            </v-btn> -->
                         </div>
                     </v-expand-transition>
                 </v-card>
@@ -134,6 +134,21 @@
                             <v-card-text>
                                 This research aims to explore and analyze in detail the operation of Koivisto, with the goal of understanding its peculiarities, its capabilities, and its impact in the context of modern chess engines. Through this analysis, the aim is to contribute to the understanding of its architecture, its artificial intelligence techniques, and its performance.
                             </v-card-text>
+                            <v-btn style="margin-bottom: 16px;" class="mx-2" dark large @click="openLink('https://koivisto-chess.com')">
+                                <v-icon
+                                    left
+                                    dark
+                                >
+                                    mdi-link
+                                </v-icon>
+                                Koivisto.com
+                                <v-icon
+                                    right
+                                    dark
+                                >
+                                    mdi-link
+                                </v-icon>
+                            </v-btn>
                         </div>
                     </v-expand-transition>
                 </v-card>
