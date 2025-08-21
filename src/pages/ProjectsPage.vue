@@ -34,6 +34,18 @@
                             <v-card-text>
                                 MyPet is a university project developed at the University of Insubria as part of a mobile development course, utilizing Kotlin. This app allows users to monitor medical visits, keep track of vaccinations and medications, and even includes a built-in pedometer.
                             </v-card-text>
+                            <v-btn style="margin-bottom: 16px;" class="mx-2" dark large @click="openLink('https://github.com/Luca9862/MyPet')">
+                                <v-icon left dark>
+                                    mdi-android
+                                </v-icon>
+                                APK Android
+                                <v-icon
+                                    right
+                                    dark
+                                >
+                                    mdi-cloud-download
+                                </v-icon>
+                            </v-btn>
                         </div>
                     </v-expand-transition>
                 </v-card>
@@ -72,6 +84,18 @@
                             <v-card-text>
                                 A user-friendly Python library for basic PGN (chess) file handling - PGN stands for Portable Game Notation, a standard plain text format for recording chess games. It includes the moves of the game as well as metadata such as the players, the event, the date, and the result.
                             </v-card-text>
+                            <v-btn style="margin-bottom: 16px;" class="mx-2" dark large @click="openLink('https://pypi.org/project/pgn-manager/')">
+                                <v-icon left dark>
+                                    mdi-language-python
+                                </v-icon>
+                                pypi
+                                <v-icon
+                                    right
+                                    dark
+                                >
+                                    mdi-link
+                                </v-icon>
+                            </v-btn>
                         </div>
                     </v-expand-transition>
                 </v-card>
@@ -223,6 +247,25 @@
                             <v-card-text>
                                 RollDice is a simple Flutter application that simulates the roll of a six-sided die
                             </v-card-text>
+                            <v-btn
+                                style="margin-bottom: 16px;"
+                                class="mx-2"
+                                dark
+                                large
+                                href="/apk/Roll Dice-v1.0.0-release.apk"
+                                download
+                            > 
+                                <v-icon left dark>
+                                    mdi-android
+                                </v-icon>
+                                APK Android
+                                <v-icon
+                                    right
+                                    dark
+                                >
+                                    mdi-cloud-download
+                                </v-icon>
+                            </v-btn>
                         </div>
                     </v-expand-transition>
                 </v-card>
