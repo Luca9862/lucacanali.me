@@ -265,7 +265,6 @@
                             <v-btn
                                 style="margin-bottom: 16px;" class="mx-2" dark large
                                 href="/apk/Roll Dice-v1.0.0-release.apk"
-                                download
                             > 
                                 <v-icon left dark>
                                     mdi-android
