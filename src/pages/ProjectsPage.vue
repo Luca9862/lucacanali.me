@@ -263,10 +263,7 @@
                                 RollDice is a simple Flutter application that simulates the roll of a six-sided die
                             </v-card-text>
                             <v-btn
-                                style="margin-bottom: 16px;"
-                                class="mx-2"
-                                dark
-                                large
+                                style="margin-bottom: 16px;" class="mx-2" dark large
                                 href="/apk/Roll Dice-v1.0.0-release.apk"
                                 download
                             > 
