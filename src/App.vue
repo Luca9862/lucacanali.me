@@ -36,6 +36,7 @@ html,
   background-color: background-color;
   font-family: Avenir, Helvetica, Arial, sans-serif;
   height: 100vh;
+  color-scheme: only light !important;
 }
 
 .app-wrapper {
