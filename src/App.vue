@@ -31,12 +31,12 @@ export default {
 </script>
 
 <style>
-html,
-#app {
-  background-color: background-color;
+html, body {
+  background: background-color !important; /* o il colore che vuoi fisso */
+  color-scheme: light !important;
+  -webkit-text-size-adjust: 100%; /* evita scaling strano */
+  forced-color-adjust: none;      /* blocca la correzione colori */
   font-family: Avenir, Helvetica, Arial, sans-serif;
-  height: 100vh;
-  color-scheme: only light !important;
 }
 
 .app-wrapper {
