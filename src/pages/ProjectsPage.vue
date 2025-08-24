@@ -107,7 +107,7 @@
                     <v-img src="../assets/pictures/koivisto.png" height="200px"></v-img>
 
                     <v-card-title>
-                        Chess Engine Study - Koivisto
+                        Chess Engine Study, Koivisto
                     </v-card-title>
 
                     <v-card-subtitle>
