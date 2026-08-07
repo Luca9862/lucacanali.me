@@ -68,7 +68,7 @@ export const projects = [
         featured: false,
         github: 'https://github.com/Luca9862/roll_dice_flutter',
         links: [
-            { label: 'APK Android', icon: 'mdi-android', url: '/apk/Roll Dice-v1.0.0-release.apk' }
+            { label: 'APK Android', icon: 'mdi-android', url: 'https://github.com/Luca9862/roll_dice_flutter/releases' }
         ],
         description: 'RollDice is a simple Flutter application that simulates the roll of a six-sided die'
     }
