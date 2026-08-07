@@ -1,51 +1,31 @@
 <template>
-    <div id="bottom-nav" style="padding-top: 100px; font-family: Avenir, Helvetica, Arial, sans-serif;">
-        <v-footer dark padless>
-            <v-card class="flex" flat tile>
-                <div style="justify-self: center;">
-                    <v-btn @click="goToHome" color="white" text rounded class="my-2">
+    <div id="bottom-nav">
+        <v-footer theme="dark" class="pa-0">
+            <div class="footer-card">
+                <div class="footer-gradient-line"></div>
+
+                <div class="footer-nav">
+                    <v-btn @click="goToHome" color="white" variant="text" rounded class="my-2">
                         Home
                     </v-btn>
-                    <v-btn @click="goToProjects" color="white" text rounded class="my-2">
+                    <v-btn @click="goToProjects" color="white" variant="text" rounded class="my-2">
                         Projects
                     </v-btn>
-                    <v-btn @click="goToInfo" color="white" text rounded class="my-2">
-                        info
+                    <v-btn @click="goToInfo" color="white" variant="text" rounded class="my-2">
+                        Info
                     </v-btn>
                 </div>
 
-                <v-card-title class="teal">
-                    <strong class="subheading">Luca Canali</strong>
+                <div class="footer-socials">
+                    <a v-for="item in icons" :key="item.url" :href="item.url" class="social-link"
+                        :target="item.url.startsWith('http') ? '_blank' : null" rel="noopener">
+                        <v-icon v-if="item.svg.startsWith('mdi-')" size="22">{{ item.svg }}</v-icon>
+                        <img v-else :src="item.svg" alt="" width="22" height="22" />
+                    </a>
+                </div>
 
-                    <v-spacer></v-spacer>
-
-                    <v-btn :href="icons[0].url" class="mx-4" dark icon>
-                        <v-img :src="icons[0].svg" max-width="24" alt="icon" class="ml-1"></v-img>
-                    </v-btn>
-                    <v-btn :href="icons[1].url" class="mx-4" dark icon>
-                        <v-icon size="24px">
-                            {{ icons[1].svg }}
-                        </v-icon>
-                    </v-btn>
-                    <v-btn :href="icons[2].url" class="mx-4" dark icon>
-                        <v-icon size="24px">
-                            {{ icons[2].svg }}
-                        </v-icon>
-                    </v-btn>
-                    <v-btn :href="icons[3].url" class="mx-4" dark icon>
-                        <v-icon size="24px">
-                            {{ icons[3].svg }}
-                        </v-icon>
-                    </v-btn>
-                    <v-btn :href="icons[4].url" class="mx-4" dark icon>
-                        <v-img :href="icons[4].url" :src="icons[4].svg" max-width="24" alt="icon" class="ml-1"></v-img>
-                    </v-btn>
-                </v-card-title>
-
-                <v-card-text class="py-2 white--text text-center" style="text-align-last: left;">
-                    1.2.0
-                </v-card-text>
-            </v-card>
+                <div class="footer-copy">© 2026 Luca Canali · v2.0.0</div>
+            </div>
         </v-footer>
     </div>
 </template>
@@ -63,8 +43,7 @@ export default {
                 { svg: 'mdi-instagram', url: 'https://www.instagram.com/_luca.canali/' },
                 { svg: 'mdi-gmail', url: 'mailto:canali.luca998@gmail.com' },
                 { svg: mediumPic, url: 'https://medium.com/@canali.luca998' },
-            ],
-            text: 'I am 26 years old and a full-stack developer with experience in back-end, front-end, and databases. I occasionally work as a freelancer, building web applications and providing tailored solutions for various technological needs. I am passionate about technology and continually improving my skills by exploring new technologies and frameworks.'
+            ]
         }
     },
     methods:{
@@ -89,19 +68,60 @@ export default {
 </script>
 
 <style scoped>
-
-.v-application .teal{
-    background-color: #1E1E1E !important;
+#bottom-nav {
+    padding-top: 100px;
+    font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
-.v-application .purple {
-    background-color: black !important;
-    border-color: black !important;
+.footer-card {
+    width: 100%;
+    background: #141414;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    padding-bottom: 20px;
 }
 
+.footer-gradient-line {
+    height: 2px;
+    background: linear-gradient(90deg, transparent, #7C4DFF, #9C27B0, transparent);
+}
 
-.text-item {
-    color: white;
-    font-family: sans-serif;
+.footer-nav {
+    padding-top: 12px;
+}
+
+.footer-socials {
+    display: flex;
+    justify-content: center;
+    gap: 18px;
+    padding: 14px 0 6px;
+}
+
+.social-link {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.06);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    color: rgba(255, 255, 255, 0.85);
+    text-decoration: none;
+    transition: transform 0.25s, background 0.25s, border-color 0.25s, box-shadow 0.25s;
+}
+
+.social-link:hover {
+    transform: translateY(-3px);
+    background: rgba(124, 77, 255, 0.25);
+    border-color: #7C4DFF;
+    color: #B388FF;
+    box-shadow: 0 6px 18px rgba(124, 77, 255, 0.35);
+}
+
+.footer-copy {
+    padding-top: 10px;
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.45);
 }
 </style>

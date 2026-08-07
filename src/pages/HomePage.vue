@@ -1,180 +1,222 @@
 <template>
     <div>
-        <v-row>
-            <v-col cols="12">
-                <div style="padding-top: 10px;">
-                    <v-img
-                    src="../assets/pictures/cover.png"
-                    max-height="500"
-                    max-width="100%"
-                    contain
-                    class="cover-image"
-                    ></v-img>
+        <section class="hero">
+            <div class="hero-text">
+                <p class="hero-hello">Hi, I'm</p>
+                <h1 class="hero-name">Luca Canali</h1>
+                <h2 class="hero-role">Full-stack Developer</h2>
+                <p class="hero-tagline">
+                    I build modern, high-performance web applications —
+                    back-end, front-end and databases.
+                </p>
+                <div class="hero-actions">
+                    <v-btn color="purple" size="large" rounded to="/projects">
+                        View projects
+                    </v-btn>
+                    <v-btn variant="outlined" color="white" size="large" rounded
+                        href="https://github.com/Luca9862" target="_blank">
+                        <v-icon start>mdi-github</v-icon>
+                        GitHub
+                    </v-btn>
                 </div>
-            </v-col>
-        </v-row>
-        <v-row style="text-align: -webkit-center;">
-            <!-- Card 1 -->
-            <v-col xs="12" sm="6" md="4" class="pa-2">
-                <v-card class="mx-auto" max-width="344">
-                    <v-img src="../assets/pictures/myPet.png" height="200px"></v-img>
+            </div>
 
-                    <v-card-title>
-                        My Pet
-                    </v-card-title>
+            <div class="hero-code" aria-hidden="true">
+                <div class="hero-code-bar">
+                    <span class="dot dot-red"></span>
+                    <span class="dot dot-yellow"></span>
+                    <span class="dot dot-green"></span>
+                    <span class="hero-code-file">luca.js</span>
+                </div>
+                <div class="hero-code-body">
+                    <div class="code-line"><span class="tk-kw">const</span> <span class="tk-var">luca</span> = {</div>
+                    <div class="code-line indent"><span class="tk-prop">role</span>: <span class="tk-str">'Full-stack Developer'</span>,</div>
+                    <div class="code-line indent"><span class="tk-prop">stack</span>: [<span class="tk-str">'C#'</span>, <span class="tk-str">'.NET'</span>, <span class="tk-str">'Vue'</span>, <span class="tk-str">'Flutter'</span>, <span class="tk-str">'SQL'</span>],</div>
+                    <div class="code-line indent"><span class="tk-prop">passion</span>: <span class="tk-str">'clean code &amp; new tech'</span>,</div>
+                    <div class="code-line indent"><span class="tk-prop">openToWork</span>: <span class="tk-kw">true</span></div>
+                    <div class="code-line">};<span class="hero-cursor"></span></div>
+                </div>
+            </div>
+        </section>
 
-                    <v-card-subtitle>
-                        Android application
-                    </v-card-subtitle>
-
-                    <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple"
-                            @click="openLink('https://github.com/Luca9862/MyPet')">
-                            <v-icon dark>
-                                mdi-github
-                            </v-icon>
-                        </v-btn>
-
-                        <v-spacer></v-spacer>
-
-                        <v-btn icon @click="showFirstCard = !showFirstCard">
-                            <v-icon>{{ showFirstCard ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                        </v-btn>
-                    </v-card-actions>
-
-                    <v-expand-transition>
-                        <div v-show="showFirstCard">
-                            <v-divider></v-divider>
-                            <v-card-text>
-                                MyPet is a university project developed at the University of Insubria as part of a
-                                mobile development course, utilizing Kotlin. This app allows users to monitor medical
-                                visits, keep track of vaccinations and medications, and even includes a built-in
-                                pedometer.
-                            </v-card-text>
-                        </div>
-                    </v-expand-transition>
-                </v-card>
-            </v-col>
-
-            <!-- Card 2 -->
-            <v-col xs="12" sm="6" md="4" class="pa-2">
-                <v-card class="mx-auto" max-width="344">
-                    <v-img src="../assets/pictures/pgnManager.png" height="200px"></v-img>
-
-                    <v-card-title>
-                        pgn-manager
-                    </v-card-title>
-
-                    <v-card-subtitle>
-                        Python package
-                    </v-card-subtitle>
-
-                    <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple"
-                            @click="openLink('https://github.com/Luca9862/pgn_manager_lib')">
-                            <v-icon dark>
-                                mdi-github
-                            </v-icon>
-                        </v-btn>
-
-                        <v-spacer></v-spacer>
-
-                        <v-btn icon @click="showSecondCard = !showSecondCard">
-                            <v-icon>{{ showSecondCard ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                        </v-btn>
-                    </v-card-actions>
-
-                    <v-expand-transition>
-                        <div v-show="showSecondCard">
-                            <v-divider></v-divider>
-                            <v-card-text>
-                                A user-friendly Python library for basic PGN (chess) file handling - PGN stands for
-                                Portable Game Notation, a standard plain text format for recording chess games. It
-                                includes the moves of the game as well as metadata such as the players, the event, the
-                                date, and the result.
-                            </v-card-text>
-                        </div>
-                    </v-expand-transition>
-                </v-card>
-            </v-col>
-
-            <!-- Card 3 -->
-            <v-col xs="12" sm="6" md="4" class="pa-2">
-                <v-card class="mx-auto" max-width="344">
-                    <v-img src="../assets/pictures/koivisto.png" height="200px"></v-img>
-
-                    <v-card-title>
-                        Chess Engine Study, Koivisto
-                    </v-card-title>
-
-                    <v-card-subtitle>
-                        Degree thesis
-                    </v-card-subtitle>
-
-                    <v-card-actions>
-                        <v-btn class="mx-2" fab dark large color="purple"
-                            @click="openLink('https://github.com/Luca9862/ChessEngineStudy_Koivisto')">
-                            <v-icon dark>
-                                mdi-github
-                            </v-icon>
-                        </v-btn>
-
-                        <v-spacer></v-spacer>
-
-                        <v-btn icon @click="showThirdCard = !showThirdCard">
-                            <v-icon>{{ showThirdCard ? 'mdi-chevron-up' : 'mdi-chevron-down' }}</v-icon>
-                        </v-btn>
-                    </v-card-actions>
-
-                    <v-expand-transition>
-                        <div v-show="showThirdCard">
-                            <v-divider></v-divider>
-                            <v-card-text>
-                                This research aims to explore and analyze in detail the operation of Koivisto, with the
-                                goal of understanding its peculiarities, its capabilities, and its impact in the context
-                                of modern chess engines. Through this analysis, the aim is to contribute to the
-                                understanding of its architecture, its artificial intelligence techniques, and its
-                                performance.
-                            </v-card-text>
-                        </div>
-                    </v-expand-transition>
-                </v-card>
-            </v-col>
-        </v-row>
+        <section class="projects-section">
+            <div class="section-head">
+                <h2 class="section-title">Featured projects</h2>
+                <router-link class="section-link" to="/projects">All projects →</router-link>
+            </div>
+            <div class="projects-grid">
+                <project-tile v-for="p in featured" :key="p.id" :project="p"></project-tile>
+            </div>
+        </section>
     </div>
 </template>
 
 <script>
-import koivisto from '../assets/pictures/koivisto.png'
+import ProjectTile from '../components/ProjectTile.vue'
+import { projects } from '../data/projects'
 
 export default {
-    data() {
-        return {
-            showFirstCard: false,
-            showSecondCard: false,
-            showThirdCard: false,
-            koivisto: koivisto
-        }
+    components: {
+        ProjectTile
     },
-    methods: {
-        openLink(url) {
-            window.open(url, '_blank');
+    computed: {
+        featured() {
+            return projects.filter(p => p.featured);
         }
     }
 }
 </script>
 
 <style>
-.body {
-    font-family: 'Roboto', sans-serif;
+/* ---------- hero ---------- */
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 48px;
+    flex-wrap: wrap;
+    position: relative;
+    padding: 64px 16px 48px;
+    max-width: 1100px;
+    margin: 0 auto;
 }
 
-.app-info {
-    padding-top: 100px;
+/* alone viola dietro l'hero: senza, testo e finestra si perdono sul nero pieno */
+.hero::before {
+    content: '';
+    position: absolute;
+    inset: -40px 0;
+    background: radial-gradient(ellipse 60% 70% at 30% 40%, rgba(124, 77, 255, 0.18), transparent 70%);
+    pointer-events: none;
 }
 
-.v-card__subtitle {
-    color: rgba(0, 0, 0, 0.6);
+.hero-text {
+    flex: 1 1 380px;
+    min-width: 300px;
+    color: white;
+    animation: hero-fade-up 0.7s ease both;
+}
+
+.hero-hello {
+    font-size: 18px;
+    color: #B39DDB;
+    margin-bottom: 4px;
+}
+
+.hero-name {
+    font-size: clamp(40px, 6vw, 64px);
+    line-height: 1.1;
+    font-weight: 800;
+    background: linear-gradient(90deg, #B388FF, #7C4DFF 45%, #9C27B0);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+}
+
+.hero-role {
+    font-size: clamp(20px, 3vw, 28px);
+    font-weight: 500;
+    color: white;
+    margin-top: 8px;
+}
+
+.hero-tagline {
+    margin-top: 16px;
+    max-width: 440px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 16px;
+    line-height: 1.6;
+}
+
+.hero-actions {
+    display: flex;
+    gap: 16px;
+    margin-top: 28px;
+    flex-wrap: wrap;
+}
+
+.hero-code {
+    flex: 0 1 460px;
+    min-width: 300px;
+    background: #1E1E1E;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 12px;
+    box-shadow: 0 20px 60px rgba(124, 77, 255, 0.25);
+    overflow: hidden;
+    animation: hero-fade-up 0.7s 0.15s ease both;
+}
+
+.hero-code-bar {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 14px;
+    background: #2A2A2A;
+}
+
+.hero-code-bar .dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+}
+
+.dot-red { background: #FF5F57; }
+.dot-yellow { background: #FEBC2E; }
+.dot-green { background: #28C840; }
+
+.hero-code-file {
+    margin-left: 8px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    font-family: 'Consolas', 'Menlo', monospace;
+}
+
+.hero-code-body {
+    padding: 20px;
+    font-family: 'Consolas', 'Menlo', monospace;
+    font-size: 14px;
+    line-height: 1.7;
+    color: #D4D4D4;
     text-align: left;
+    overflow-x: auto;
+}
+
+.code-line {
+    white-space: nowrap;
+}
+
+/* indentazione resa via padding (2ch = 2 colonne monospace), non con spazi nel markup */
+.code-line.indent {
+    padding-left: 2ch;
+}
+
+.tk-kw { color: #C586C0; }
+.tk-var { color: #9CDCFE; }
+.tk-prop { color: #4FC1FF; }
+.tk-str { color: #CE9178; }
+
+.hero-cursor {
+    display: inline-block;
+    width: 8px;
+    height: 16px;
+    margin-left: 4px;
+    vertical-align: text-bottom;
+    background: #7C4DFF;
+    animation: hero-blink 1.1s steps(1) infinite;
+}
+
+@keyframes hero-blink {
+    50% { opacity: 0; }
+}
+
+@keyframes hero-fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(16px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 </style>

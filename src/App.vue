@@ -1,19 +1,15 @@
 <template>
-  <div id="app">
-    <div class="app-wrapper">
-      <header class="header-content">
-        <app-sidebar></app-sidebar>
-      </header>
+  <v-app>
+    <app-sidebar></app-sidebar>
 
-      <main class="main-content">
+    <v-main>
+      <div class="main-content">
         <router-view></router-view>
-      </main>
+      </div>
+    </v-main>
 
-      <footer>
-        <bottom-navigation></bottom-navigation>
-      </footer>
-    </div>
-  </div>
+    <bottom-navigation></bottom-navigation>
+  </v-app>
 </template>
 
 
@@ -32,25 +28,68 @@ export default {
 
 <style>
 html, body {
-  background: background-color !important; /* o il colore che vuoi fisso */
   color-scheme: light !important;
   -webkit-text-size-adjust: 100%; /* evita scaling strano */
   forced-color-adjust: none;      /* blocca la correzione colori */
   font-family: Avenir, Helvetica, Arial, sans-serif;
 }
 
-.app-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
-}
-
 .main-content {
-  flex: 1; /* prende tutto lo spazio disponibile */
   padding: 32px;
 }
 
-.header-content{
-  height: auto !important;
+/* ---------- sezioni progetti (condivise da Home e Projects) ---------- */
+.projects-section {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 0;
+}
+
+.projects-page {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 24px 16px 0;
+}
+
+.section-head {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  margin-bottom: 24px;
+}
+
+.section-title {
+  position: relative;
+  padding-bottom: 10px;
+  color: white;
+  font-size: 26px;
+  font-weight: 700;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 3px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #B388FF, #9C27B0);
+}
+
+.section-link {
+  color: #B388FF;
+  font-size: 14px;
+  text-decoration: none;
+}
+
+.section-link:hover {
+  color: #D1C4E9;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 24px;
 }
 </style>

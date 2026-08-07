@@ -1,23 +1,16 @@
-import Vue from 'vue'
+import { createApp } from 'vue'
+import { createRouter, createWebHistory } from 'vue-router'
 import App from './App.vue'
-import VueRouter from 'vue-router'
 import { routes } from './router'
-import ElementUI from 'element-ui';
-import 'element-ui/lib/theme-chalk/index.css';
 import vuetify from './plugins/vuetify'
+import '@mdi/font/css/materialdesignicons.css'
 
-Vue.config.productionTip = false
-Vue.use(ElementUI);
-Vue.use(VueRouter);
-
-const router = new VueRouter({
-  routes: routes,
-  mode: 'history'
+const router = createRouter({
+  history: createWebHistory(),
+  routes: routes
 })
 
-
-new Vue({
-  render: h => h(App),
-  vuetify,
-  router: router
-}).$mount('#app')
+createApp(App)
+  .use(router)
+  .use(vuetify)
+  .mount('#app')
